@@ -1,19 +1,19 @@
 echo "Installing packages required by CoGaDB..."
 
-#for Ubuntu 14.04, we require at least llvm and clang in version 3.6
-LLVM_SOURCES="clang-3.6 libclang-3.6-dev libclang-common-3.6-dev llvm-3.6 llvm-3.6-dev llvm-3.6-examples llvm-3.6-runtime llvm-3.6-tools"
+#for Ubuntu 16.04, we require at least llvm and clang in version 3.8
+LLVM_SOURCES="clang-3.8 libclang-3.8-dev libclang-common-3.8-dev llvm-3.8 llvm-3.8-dev llvm-3.8-examples llvm-3.8-runtime llvm-3.8-tools"
 OPENCL_SOURCES="ocl-icd-libopencl1 ocl-icd-opencl-dev"
 
 #LLVM Sources
-sudo apt-get install clang-3.6 libclang-3.6-dev libclang-common-3.6-dev llvm-3.6 llvm-3.6-dev llvm-3.6-examples llvm-3.6-runtime llvm-3.6-tools
+sudo apt-get install clang-3.8 libclang-3.8-dev libclang-common-3.8-dev llvm-3.8 llvm-3.8-dev llvm-3.8-examples llvm-3.8-runtime llvm-3.8-tools
 #OpenCL
 sudo apt-get install ocl-icd-libopencl1 ocl-icd-opencl-dev
 
 #core tools and libraries
 sudo apt-get install gcc g++ astyle highlight make cmake flex libtbb-dev libreadline6 libreadline6-dev doxygen doxygen-gui graphviz xsltproc libxslt1-dev libnuma1 libnuma-dev libsparsehash-dev sharutils bison libsparsehash-dev netcat-openbsd libbam-dev zlib1g zlib1g-dev libboost-filesystem-dev libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-serialization-dev libboost-chrono-dev libboost-date-time-dev libboost-random-dev libboost-iostreams-dev libboost-log-dev
 
-#latex packages required for building manual and plotting experimental results
-sudo apt-get install texlive-base texlive-binaries texlive-extra-utils texlive-font-utils texlive-fonts-recommended texlive-fonts-recommended-doc texlive-generic-recommended texlive-lang-german texlive-latex-base texlive-latex-base-doc texlive-latex-extra texlive-latex-extra-doc texlive-latex-recommended texlive-latex-recommended-doc texlive-pictures texlive-pictures-doc texlive-pstricks texlive-pstricks-doc texlive-science texlive-science-doc
+#latex packages required for building manual and plotting experimental results (optional)
+#sudo apt-get install texlive-base texlive-binaries texlive-extra-utils texlive-font-utils texlive-fonts-recommended texlive-fonts-recommended-doc texlive-generic-recommended texlive-lang-german texlive-latex-base texlive-latex-base-doc texlive-latex-extra texlive-latex-extra-doc texlive-latex-recommended texlive-latex-recommended-doc texlive-pictures texlive-pictures-doc texlive-pstricks texlive-pstricks-doc texlive-science texlive-science-doc
 
 #python
 sudo apt-get install liblapack-dev gfortran
@@ -29,9 +29,9 @@ cd "cogadb_new_depency_installer_tmp_dir"
 
 sudo apt-get update
 #install OpenCL include and ICT loader
-sudo apt-get install ocl-icd-libopencl1 ocl-icd-opencl-dev
+#sudo apt-get install ocl-icd-libopencl1 ocl-icd-opencl-dev
 #install LLVM
-sudo apt-get install clang-3.6 libclang-3.6-dev libclang-common-3.6-dev llvm-3.6 llvm-3.6-dev llvm-3.6-examples llvm-3.6-runtime llvm-3.6-tools
+#sudo apt-get install clang-3.8 libclang-3.8-dev libclang-common-3.8-dev llvm-3.8 llvm-3.8-dev llvm-3.8-examples llvm-3.8-runtime llvm-3.8-tools
 
 #install boost compute
 wget https://github.com/boostorg/compute/archive/v0.5.tar.gz
