@@ -42,3 +42,5 @@ source/CoGaDB.cbp
 source/config.h
 
 source/Makefile
+
+source/.idea/workspace.xml
