@@ -1,0 +1,74 @@
+/home/gurumurt/Downloads/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source
+-- The C compiler identification is GNU 5.5.0
+-- The CXX compiler identification is GNU 5.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- CCACHE not found
+-- Found Thrust
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.47.0") found components:  filesystem system thread program_options serialization chrono random date_time iostreams regex log atomic log_setup 
+-- Found Intel TBB
+-- Looking for CPU ISA Extensions
+-- 	AVX supported
+--     SSE2 supported
+--     SSE3 supported
+--     SSSE3 supported
+-- Looking for cudaMemGetInfo
+-- Looking for cudaMemGetInfo - not found
+-- Could NOT find BAM (missing: BAM_LIBRARIES) 
+CMake Warning at CMakeLists.txt:162 (message):
+   Disabling genomics importer for FASTA, SAM and BAM files. Reason: libbam not found. You should install following package on Ubuntu to fix this: libbam-dev.
+
+
+-- Found OpenMP_C: -fopenmp  
+-- Found OpenMP_CXX: -fopenmp  
+-- Found OpenMP: TRUE   
+INFO Google performance tools will not be used.
+-- Could NOT find LibReadline (missing: LIBREADLINE_LIBRARY LIBREADLINE_INCLUDE_DIRS) 
+CMake Warning at CMakeLists.txt:202 (message):
+  GNU Readline not found! Falling back to simple command line reader.
+
+
+-- LLVM llvm-config found at: /usr/bin/llvm-config-3.9
+-- Clang libs: /usr/lib/llvm-3.9/lib/libclangFrontend.a/usr/lib/llvm-3.9/lib/libclangFrontendTool.a/usr/lib/llvm-3.9/lib/libclangDriver.a/usr/lib/llvm-3.9/lib/libclangCodeGen.a/usr/lib/llvm-3.9/lib/libclangEdit.a/usr/lib/llvm-3.9/lib/libclangSema.a/usr/lib/llvm-3.9/lib/libclangAnalysis.a/usr/lib/llvm-3.9/lib/libclangRewrite.a/usr/lib/llvm-3.9/lib/libclangAST.a/usr/lib/llvm-3.9/lib/libclangParse.a/usr/lib/llvm-3.9/lib/libclangLex.a/usr/lib/llvm-3.9/lib/libclangBasic.a/usr/lib/llvm-3.9/lib/libclangSerialization.a/usr/lib/llvm-3.9/lib/libclangStaticAnalyzerFrontend.a/usr/lib/llvm-3.9/lib/libclangStaticAnalyzerCheckers.a/usr/lib/llvm-3.9/lib/libclangStaticAnalyzerCore.a/usr/lib/llvm-3.9/lib/libclangARCMigrate.a/usr/lib/llvm-3.9/lib/libclangRewriteFrontend.a
+-- Found Clang: /usr/lib/llvm-3.9/include
+-- Found RapidJSON
+-- Disabled JSON schema validation
+-- Found Boost: /usr/include (found suitable version "1.65.1", minimum required is "1.47.0") found components:  filesystem system thread program_options chrono serialization date_time atomic 
+-- Checking for module 'alglib>=3.6.0'
+--   No package 'alglib' found
+-- Using included ALGLIB
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+CMake Warning at lib/hype/doc/CMakeLists.txt:20 (message):
+  Doxygen not found.  Will not generate hype-doc target!
+
+
+/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/external/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest/googletest/include/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest/googlemock/include/usr/include/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/hype/include/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/hype/../cogadb/include/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/hype
+CMake Warning at CMakeLists.txt:364 (message):
+  GPU acceleration is disabled, I will not build the CUDA backend!
+
+
+CMake Warning at CMakeLists.txt:497 (message):
+  GPU acceleration is disabled, I will not build the hybrid CPU/GPU operator
+  benchmarks!
+
+
+-- Could NOT find LibXslt (missing: LIBXSLT_LIBRARIES LIBXSLT_INCLUDE_DIR) 
+CMake Warning at doc/CMakeLists.txt:5 (message):
+  xsltproc not found.  Will not generate cogadb-doc target!
+
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source

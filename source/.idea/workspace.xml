@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="CoGaDB" targetName="sql_benchmark_parser" />
+      <config projectName="CoGaDB" targetName="sql_test_ssb_diagrams" />
+      <config projectName="CoGaDB" targetName="bulk_execution_tpch-tests" />
+      <config projectName="CoGaDB" targetName="json_query_compiler_interface-tests" />
+      <config projectName="CoGaDB" targetName="cogadbd" />
+      <config projectName="CoGaDB" targetName="opencl_query_compiler_ssb_aggregation-tests" />
+      <config projectName="CoGaDB" targetName="dictionary_compressed_column-tests" />
+      <config projectName="CoGaDB" targetName="gtest" />
+      <config projectName="CoGaDB" targetName="bulk_execution_ssb-tests" />
+      <config projectName="CoGaDB" targetName="standard_query_tests" />
+      <config projectName="CoGaDB" targetName="load_query_from_json" />
+      <config projectName="CoGaDB" targetName="code-generation-tests" />
+      <config projectName="CoGaDB" targetName="vector_at_a_time_test" />
+      <config projectName="CoGaDB" targetName="code_generation_k_means" />
+      <config projectName="CoGaDB" targetName="json_parser-tests" />
+      <config projectName="CoGaDB" targetName="variant-configurator-tests" />
+      <config projectName="CoGaDB" targetName="opencl_query_compiler_ssb_groupagg-tests" />
+      <config projectName="CoGaDB" targetName="hype" />
+      <config projectName="CoGaDB" targetName="wah_bitmap_column-tests" />
+      <config projectName="CoGaDB" targetName="variant-measurement-tests" />
+      <config projectName="CoGaDB" targetName="SQLParser" />
+      <config projectName="CoGaDB" targetName="doc" />
+      <config projectName="CoGaDB" targetName="opencl_kernel_launch" />
+      <config projectName="CoGaDB" targetName="opencl_query_compiler_ssb_projection-tests" />
+      <config projectName="CoGaDB" targetName="query_compiler_ssb-tests" />
+      <config projectName="CoGaDB" targetName="order_preserving_dictionary_compressed_column-tests" />
+      <config projectName="CoGaDB" targetName="cogadb" />
+      <config projectName="CoGaDB" targetName="cogadb_tests" />
+      <config projectName="CoGaDB" targetName="string_column_tests" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Default" GENERATION_DIR="." />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="144af660-0ecf-4a41-b21e-e555f2ec12f5" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Default" />
+  <component name="ProjectId" id="1UkF4N5MpDw9z7u2O4k1G2uVxmG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager" selected="CMake Application.sql_benchmark_parser">
+    <configuration name="bulk_execution_ssb-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="bulk_execution_ssb-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="bulk_execution_ssb-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bulk_execution_tpch-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="bulk_execution_tpch-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="bulk_execution_tpch-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="code-generation-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="code-generation-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="code-generation-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="code_generation_k_means" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="code_generation_k_means" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="code_generation_k_means" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dictionary_compressed_column-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="dictionary_compressed_column-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="dictionary_compressed_column-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="json_parser-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="json_parser-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="json_parser-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="json_query_compiler_interface-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="json_query_compiler_interface-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="json_query_compiler_interface-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="load_query_from_json" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="load_query_from_json" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="load_query_from_json" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="opencl_kernel_launch" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="opencl_kernel_launch" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="opencl_kernel_launch" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="opencl_query_compiler_ssb_aggregation-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="opencl_query_compiler_ssb_aggregation-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="opencl_query_compiler_ssb_aggregation-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="opencl_query_compiler_ssb_groupagg-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="opencl_query_compiler_ssb_groupagg-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="opencl_query_compiler_ssb_groupagg-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="opencl_query_compiler_ssb_projection-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="opencl_query_compiler_ssb_projection-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="opencl_query_compiler_ssb_projection-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="order_preserving_dictionary_compressed_column-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="order_preserving_dictionary_compressed_column-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="order_preserving_dictionary_compressed_column-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="query_compiler_ssb-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="query_compiler_ssb-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="query_compiler_ssb-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="standard_query_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="standard_query_tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="standard_query_tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="string_column_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="string_column_tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="string_column_tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="variant-configurator-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="variant-configurator-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="variant-configurator-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="variant-measurement-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="variant-measurement-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="variant-measurement-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="vector_at_a_time_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="vector_at_a_time_test" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="vector_at_a_time_test" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wah_bitmap_column-tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="wah_bitmap_column-tests" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="wah_bitmap_column-tests" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SQLParser" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="SQLParser" CONFIG_NAME="Default">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cogadb" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="cogadb" CONFIG_NAME="Default">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cogadb_tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="cogadb_tests" CONFIG_NAME="Default">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="cogadbd" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="cogadbd" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="cogadbd">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="doc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="doc" CONFIG_NAME="Default">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="gtest" CONFIG_NAME="Default">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hype" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="hype" CONFIG_NAME="Default">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sql_benchmark_parser" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="sql_benchmark_parser" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="sql_benchmark_parser">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sql_test_ssb_diagrams" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CoGaDB" TARGET_NAME="sql_test_ssb_diagrams" CONFIG_NAME="Default" RUN_TARGET_PROJECT_NAME="CoGaDB" RUN_TARGET_NAME="sql_test_ssb_diagrams">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.cogadb" />
+      <item itemvalue="CMake Application.cogadb_tests" />
+      <item itemvalue="CMake Application.doc" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.sql_benchmark_parser" />
+      <item itemvalue="CMake Application.sql_test_ssb_diagrams" />
+      <item itemvalue="CMake Application.SQLParser" />
+      <item itemvalue="CMake Application.hype" />
+      <item itemvalue="CMake Application.cogadbd" />
+      <item itemvalue="Google Test.code-generation-tests" />
+      <item itemvalue="Google Test.dictionary_compressed_column-tests" />
+      <item itemvalue="Google Test.order_preserving_dictionary_compressed_column-tests" />
+      <item itemvalue="Google Test.string_column_tests" />
+      <item itemvalue="Google Test.wah_bitmap_column-tests" />
+      <item itemvalue="Google Test.variant-configurator-tests" />
+      <item itemvalue="Google Test.variant-measurement-tests" />
+      <item itemvalue="Google Test.bulk_execution_ssb-tests" />
+      <item itemvalue="Google Test.bulk_execution_tpch-tests" />
+      <item itemvalue="Google Test.code_generation_k_means" />
+      <item itemvalue="Google Test.json_query_compiler_interface-tests" />
+      <item itemvalue="Google Test.load_query_from_json" />
+      <item itemvalue="Google Test.opencl_kernel_launch" />
+      <item itemvalue="Google Test.opencl_query_compiler_ssb_aggregation-tests" />
+      <item itemvalue="Google Test.opencl_query_compiler_ssb_groupagg-tests" />
+      <item itemvalue="Google Test.opencl_query_compiler_ssb_projection-tests" />
+      <item itemvalue="Google Test.query_compiler_ssb-tests" />
+      <item itemvalue="Google Test.standard_query_tests" />
+      <item itemvalue="Google Test.vector_at_a_time_test" />
+      <item itemvalue="Google Test.json_parser-tests" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1874" height="315" key="GridCell.Tab.0.bottom" timestamp="1575893235674">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1874" height="315" key="GridCell.Tab.0.bottom/0.27.1920.1173@0.27.1920.1173" timestamp="1575893235674" />
+    <state width="1874" height="315" key="GridCell.Tab.0.center" timestamp="1575893235674">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1874" height="315" key="GridCell.Tab.0.center/0.27.1920.1173@0.27.1920.1173" timestamp="1575893235674" />
+    <state width="1874" height="315" key="GridCell.Tab.0.left" timestamp="1575893235673">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1874" height="315" key="GridCell.Tab.0.left/0.27.1920.1173@0.27.1920.1173" timestamp="1575893235673" />
+    <state width="1874" height="315" key="GridCell.Tab.0.right" timestamp="1575893235674">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1874" height="315" key="GridCell.Tab.0.right/0.27.1920.1173@0.27.1920.1173" timestamp="1575893235674" />
+    <state x="616" y="440" key="com.intellij.ide.util.TipDialog" timestamp="1575892496522">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="616" y="440" key="com.intellij.ide.util.TipDialog/0.27.1920.1173@0.27.1920.1173" timestamp="1575892496522" />
+    <state x="606" y="217" width="707" height="792" key="find.popup" timestamp="1575892627979">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="606" y="217" width="707" height="792" key="find.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1575892627979" />
+  </component>
+</project>

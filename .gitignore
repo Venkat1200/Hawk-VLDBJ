@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+source/utility_scripts/cogadb_new_depency_installer_tmp_dir/
+
+*.cmake
+
+source/CMakeCache.txt
+
+source/CoGaDB.cbp
+
+source/config.h
+
+source/Makefile

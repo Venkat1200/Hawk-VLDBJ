@@ -1,0 +1,1 @@
+cmd='/home/gurumurt/Downloads/clion-2019.3.1/bin/cmake/linux/bin/cmake;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'
