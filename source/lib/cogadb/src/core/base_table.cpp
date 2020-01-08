@@ -36,8 +36,7 @@
 #include "core/variable_manager.hpp"
 #include "lookup_table/join_index.hpp"
 
-//#include <boost/tr1/memory.hpp>
-#include <boost/compute/memory.hpp>
+#include <boost/tr1/memory.hpp>
 #include <new>
 #include <util/column_grouping_keys.hpp>
 #include <util/result_output_format.hpp>

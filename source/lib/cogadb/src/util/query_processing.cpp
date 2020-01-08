@@ -69,6 +69,7 @@ const std::pair<TablePtr, VariantMeasurement> executeQueryPlanWithCompiler(
       ((double(end_total_time - begin_total_time) / (1000 * 1000 * 1000)) -
        context->getCompileTimeSec()) -
       context->getExecutionTimeSec();
+ 	//out<<pipeline_execution_time_s<<"this is pipeline time";
 
   VariantMeasurement vm(
       true, total_execution_time_s, pipeline_execution_time_s,
@@ -622,9 +623,11 @@ const TablePtr executeQueryPlan(query_processing::LogicalQueryPlanPtr log_plan,
     CodeGeneratorType code_gen_type;
     std::string code_gen_name =
         VariableManager::instance().getVariableValueString(
-            "default_code_generator");
+            "default_code_generator");	
+	out<<"I soon will be in some mode";
 
     convertToCodeGenerator(code_gen_name, code_gen_type);
+	out<<"I am in Compiled mode now";
 
     const std::string variant_exploration_mode =
         VariableManager::instance().getVariableValueString(
@@ -635,6 +638,7 @@ const TablePtr executeQueryPlan(query_processing::LogicalQueryPlanPtr log_plan,
       std::pair<TablePtr, VariantMeasurement> ret =
           executeQueryPlanWithCompiler(log_plan, client, code_gen_type,
                                        &fastest_variant);
+	out<<"I am in exploration mode now";
       result = ret.first;
       print(client, ret.second);
     } else {
@@ -645,6 +649,7 @@ const TablePtr executeQueryPlan(query_processing::LogicalQueryPlanPtr log_plan,
     CoGaDB::query_processing::PhysicalQueryPlanPtr result_plan =
         CoGaDB::query_processing::optimize_and_execute("", *log_plan, client);
     assert(result_plan != NULL);
+	out<<"I am in interpreted mode now";
     result = result_plan->getResult();
   } else {
     COGADB_FATAL_ERROR(

@@ -128,3 +128,4 @@ You can perform the experiment with the script
 [`../collect_results.sh`](https://github.com/TU-Berlin-DIMA/Hawk-VLDBJ/blob/master/source/benchmarks/falcon_query_experiments/collect_results.sh) 
 and 
 [`../collect_results_compilation_time.sh`](https://github.com/TU-Berlin-DIMA/Hawk-VLDBJ/blob/master/source/benchmarks/falcon_query_experiments/collect_results_compilation_time.sh).
+# CoGaDB

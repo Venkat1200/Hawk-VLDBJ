@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source
+CMAKE_SOURCE_DIR = /home/sankul/Hawk-VLDBJ-master/source
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source
+CMAKE_BINARY_DIR = /home/sankul/Hawk-VLDBJ-master/source
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cuda_gpu_backend.dir/depend.make
@@ -57,116 +57,318 @@ include CMakeFiles/cuda_gpu_backend.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cuda_gpu_backend.dir/flags.make
 
-CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/cuda_gpu_backend_generated_mgpucontext.cu.o.depend
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: external/moderngpu/include/util/format.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: external/moderngpu/include/util/mgpualloc.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: external/moderngpu/include/util/mgpucontext.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: external/moderngpu/include/util/static.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: external/moderngpu/include/util/util.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: external/moderngpu/src/mgpucontext.cu
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/alloca.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/asm-generic/errno-base.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/asm-generic/errno.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/assert.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/algorithm
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/array
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/backward/auto_ptr.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/backward/binders.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/algorithmfwd.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/alloc_traits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/allocated_ptr.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/allocator.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/atomic_base.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/atomic_lockfree_defines.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/basic_ios.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/basic_ios.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/basic_string.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/basic_string.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/char_traits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/concept_check.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/cpp_type_traits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/cxxabi_forced.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/cxxabi_init_exception.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/exception.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/exception_defines.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/exception_ptr.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/functexcept.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/functional_hash.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/hash_bytes.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/invoke.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/ios_base.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/istream.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/list.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/locale_classes.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/locale_classes.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/locale_facets.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/locale_facets.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/localefwd.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/memoryfwd.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/move.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/nested_exception.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/ostream.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/ostream_insert.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/postypes.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/predefined_ops.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/ptr_traits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/range_access.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/refwrap.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/shared_ptr.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/shared_ptr_atomic.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/shared_ptr_base.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/std_abs.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/std_function.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_algo.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_algobase.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_bvector.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_construct.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_function.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_heap.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_iterator.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_iterator_base_funcs.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_iterator_base_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_list.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_map.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_multimap.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_pair.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_raw_storage_iter.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_relops.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_tempbuf.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_tree.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_uninitialized.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stl_vector.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stream_iterator.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/streambuf.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/streambuf_iterator.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/stringfwd.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/uniform_int_dist.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/unique_ptr.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/uses_allocator.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/bits/vector.tcc
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cassert
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cctype
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cerrno
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cfloat
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/clocale
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cmath
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cstdint
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cstdio
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cstdlib
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cwchar
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/cwctype
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/debug/assertions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/debug/debug.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/exception
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ext/aligned_buffer.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ext/alloc_traits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ext/atomicity.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ext/concurrence.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ext/new_allocator.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ext/numeric_traits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ext/string_conversions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ext/type_traits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/functional
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/initializer_list
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ios
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/iosfwd
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/istream
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/iterator
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/limits
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/list
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/map
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/math.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/memory
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/new
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/ostream
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/stdexcept
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/stdlib.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/streambuf
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/string
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/system_error
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/tuple
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/type_traits
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/typeinfo
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/utility
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/c++/7/vector
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/ctype.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/endian.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/errno.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/features.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/limits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/linux/errno.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/linux/limits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/locale.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/math.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/pthread.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/sched.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/stdc-predef.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/stdint.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/stdio.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/stdlib.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/string.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/strings.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/time.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/wchar.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/wctype.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/asm/errno.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/_G_config.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/byteswap-16.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/byteswap.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/cpu-set.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/endian.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/errno.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/floatn-common.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/floatn.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/fp-fast.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/fp-logb.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/iscanonical.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/libio.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/local_lim.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/locale.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/long-double.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/math-vector.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/mathcalls.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/sched.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/select.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/setjmp.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/sys_errlist.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/sysmacros.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/time.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/timex.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/FILE.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/__FILE.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/clock_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/locale_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/time_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/timer_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/types/wint_t.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/typesizes.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/uio_lim.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/waitflags.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/waitstatus.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/wchar.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/wordsize.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/atomic_word.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/c++allocator.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/c++locale.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/cpu_defines.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_base.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/ctype_inline.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/error_constants.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/gthr-default.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/gthr.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/gnu/stubs.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/sys/cdefs.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/sys/select.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/sys/sysmacros.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/include/x86_64-linux-gnu/sys/types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/limits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/lib/gcc/x86_64-linux-gnu/7/include-fixed/syslimits.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/lib/gcc/x86_64-linux-gnu/7/include/float.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/lib/gcc/x86_64-linux-gnu/7/include/stdarg.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/lib/gcc/x86_64-linux-gnu/7/include/stddef.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/lib/gcc/x86_64-linux-gnu/7/include/stdint.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/builtin_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/channel_descriptor.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/common_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/common_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/device_double_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/device_double_functions.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/device_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/device_functions.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/host_config.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/host_defines.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/math_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/math_functions.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/sm_70_rt.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/crt/sm_70_rt.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/cuda.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/cuda_device_runtime_api.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/cuda_runtime.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/cuda_runtime_api.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/cuda_surface_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/cuda_texture_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/device_atomic_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/device_atomic_functions.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/device_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/device_launch_parameters.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/device_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/driver_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/driver_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/host_config.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/host_defines.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/library_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_20_atomic_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_20_atomic_functions.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_20_intrinsics.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_20_intrinsics.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_30_intrinsics.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_30_intrinsics.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_32_atomic_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_32_atomic_functions.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_32_intrinsics.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_32_intrinsics.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_35_atomic_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_35_intrinsics.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_60_atomic_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_60_atomic_functions.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_61_intrinsics.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/sm_61_intrinsics.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/surface_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/surface_indirect_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/surface_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/texture_fetch_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/texture_indirect_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/texture_types.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/vector_functions.h
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/vector_functions.hpp
+CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: /usr/local/cuda-9.2/include/vector_types.h
 CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/cuda_gpu_backend_generated_mgpucontext.cu.o.cmake
 CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o: external/moderngpu/src/mgpucontext.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_mgpucontext.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_mgpucontext.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/cuda_gpu_backend_generated_mgpucontext.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_work_unittests.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/unittests/cuda_gpu_backend_generated_gpu_work_unittests.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_work_unittests.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/unittests/cuda_gpu_backend_generated_gpu_work_unittests.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_work_unittests.cu.o: lib/cogadb/src/unittests/gpu_work_unittests.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_work_unittests.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/unittests && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/unittests && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_work_unittests.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_work_unittests.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/unittests/cuda_gpu_backend_generated_gpu_work_unittests.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_aggregation.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_aggregation.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_aggregation.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_aggregation.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_aggregation.cu.o: lib/cogadb/src/backends/gpu/gpu_aggregation.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_aggregation.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_aggregation.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_aggregation.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_aggregation.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_bit_operations.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_bit_operations.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_bit_operations.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_bit_operations.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_bit_operations.cu.o: lib/cogadb/src/backends/gpu/gpu_bit_operations.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_bit_operations.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_bit_operations.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_bit_operations.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_bit_operations.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o: lib/cogadb/src/backends/gpu/gpu_bitmap_set_operation.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_column_algebra.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_column_algebra.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_column_algebra.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_column_algebra.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_column_algebra.cu.o: lib/cogadb/src/backends/gpu/gpu_column_algebra.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_column_algebra.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_column_algebra.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_column_algebra.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_column_algebra.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o: lib/cogadb/src/backends/gpu/gpu_conversion_operations.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_conversion_operations.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_conversion_operations.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_fetch_join.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_fetch_join.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_fetch_join.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_fetch_join.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_fetch_join.cu.o: lib/cogadb/src/backends/gpu/gpu_fetch_join.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_fetch_join.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_fetch_join.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_fetch_join.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_fetch_join.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_join.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_join.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_join.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_join.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_join.cu.o: lib/cogadb/src/backends/gpu/gpu_join.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_join.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_join.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_join.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_join.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_selection.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_selection.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_selection.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_selection.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_selection.cu.o: lib/cogadb/src/backends/gpu/gpu_selection.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_selection.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_selection.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_selection.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_selection.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_gpu_util.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_util.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_gpu_util.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_util.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_gpu_util.cu.o: lib/cogadb/src/backends/gpu/gpu_util.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_gpu_util.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_util.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_gpu_util.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_gpu_util.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_positionlist_set_operation.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_positionlist_set_operation.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_positionlist_set_operation.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_positionlist_set_operation.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_positionlist_set_operation.cu.o: lib/cogadb/src/backends/gpu/positionlist_set_operation.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_positionlist_set_operation.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_positionlist_set_operation.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_positionlist_set_operation.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/cuda_gpu_backend_generated_positionlist_set_operation.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_hash_functions.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/cuda_gpu_backend_generated_hash_functions.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_hash_functions.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/cuda_gpu_backend_generated_hash_functions.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_hash_functions.cu.o: lib/cogadb/src/backends/gpu/hashtable/hash_functions.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_hash_functions.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_hash_functions.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_hash_functions.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/cuda_gpu_backend_generated_hash_functions.cu.o.cmake
-
-CMakeFiles/cuda_gpu_backend_generated_hash_table.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/cuda_gpu_backend_generated_hash_table.cu.o.depend
-CMakeFiles/cuda_gpu_backend_generated_hash_table.cu.o: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/cuda_gpu_backend_generated_hash_table.cu.o.cmake
-CMakeFiles/cuda_gpu_backend_generated_hash_table.cu.o: lib/cogadb/src/backends/gpu/hashtable/hash_table.cu
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_hash_table.cu.o"
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable && /usr/bin/cmake -E make_directory /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/.
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_hash_table.cu.o -D generated_cubin_file:STRING=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/./cuda_gpu_backend_generated_hash_table.cu.o.cubin.txt -P /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/cuda_gpu_backend_generated_hash_table.cu.o.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building NVCC (Device) object CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o"
+	cd /home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src && /usr/bin/cmake -E make_directory /home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/.
+	cd /home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src && /usr/bin/cmake -D verbose:BOOL=$(VERBOSE) -D build_configuration:STRING= -D generated_file:STRING=/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/./cuda_gpu_backend_generated_mgpucontext.cu.o -D generated_cubin_file:STRING=/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/./cuda_gpu_backend_generated_mgpucontext.cu.o.cubin.txt -P /home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/cuda_gpu_backend_generated_mgpucontext.cu.o.cmake
 
 CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o: CMakeFiles/cuda_gpu_backend.dir/flags.make
 CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o: external/moderngpu/src/mgpuutil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o -c /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/external/moderngpu/src/mgpuutil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o -c /home/sankul/Hawk-VLDBJ-master/source/external/moderngpu/src/mgpuutil.cpp
 
 CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/external/moderngpu/src/mgpuutil.cpp > CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sankul/Hawk-VLDBJ-master/source/external/moderngpu/src/mgpuutil.cpp > CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.i
 
 CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/external/moderngpu/src/mgpuutil.cpp -o CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sankul/Hawk-VLDBJ-master/source/external/moderngpu/src/mgpuutil.cpp -o CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.s
 
 CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o.requires:
 
@@ -179,177 +381,21 @@ CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o.provides: 
 CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o.provides.build: CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o
 
 
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o: CMakeFiles/cuda_gpu_backend.dir/flags.make
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o: lib/cogadb/src/backends/gpu/gpu_backend.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o -c /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/gpu_backend.cpp
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/gpu_backend.cpp > CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.i
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/gpu_backend.cpp -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.s
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o.requires:
-
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o.requires
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o.provides: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o.requires
-	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o.provides.build
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o.provides
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o.provides.build: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o
-
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o: CMakeFiles/cuda_gpu_backend.dir/flags.make
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o: lib/cogadb/src/backends/gpu/memory_cost_models.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o -c /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/memory_cost_models.cpp
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/memory_cost_models.cpp > CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.i
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/memory_cost_models.cpp -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.s
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o.requires:
-
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o.requires
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o.provides: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o.requires
-	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o.provides.build
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o.provides
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o.provides.build: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o
-
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o: CMakeFiles/cuda_gpu_backend.dir/flags.make
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o: lib/cogadb/src/backends/gpu/stream_manager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o -c /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/stream_manager.cpp
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/stream_manager.cpp > CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.i
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/stream_manager.cpp -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.s
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o.requires:
-
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o.requires
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o.provides: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o.requires
-	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o.provides.build
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o.provides
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o.provides.build: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o
-
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o: CMakeFiles/cuda_gpu_backend.dir/flags.make
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o: lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o -c /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp > CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.i
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.s
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o.requires:
-
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o.requires
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o.provides: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o.requires
-	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o.provides.build
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o.provides
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o.provides.build: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o
-
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o: CMakeFiles/cuda_gpu_backend.dir/flags.make
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o: lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o -c /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp > CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.i
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp -o CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.s
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o.requires:
-
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o.requires
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o.provides: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o.requires
-	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o.provides.build
-.PHONY : CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o.provides
-
-CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o.provides.build: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o
-
-
 # Object files for target cuda_gpu_backend
 cuda_gpu_backend_OBJECTS = \
-"CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o" \
-"CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o" \
-"CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o" \
-"CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o" \
-"CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o" \
-"CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o"
+"CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o"
 
 # External object files for target cuda_gpu_backend
 cuda_gpu_backend_EXTERNAL_OBJECTS = \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_work_unittests.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_aggregation.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_bit_operations.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_column_algebra.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_fetch_join.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_join.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_selection.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_gpu_util.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_positionlist_set_operation.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_hash_functions.cu.o" \
-"/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend_generated_hash_table.cu.o"
+"/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o"
 
 lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o
 lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_work_unittests.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_aggregation.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_bit_operations.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_column_algebra.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_fetch_join.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_join.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_selection.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_gpu_util.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_positionlist_set_operation.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_hash_functions.cu.o
-lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend_generated_hash_table.cu.o
 lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend.dir/build.make
-lib/libcuda_gpu_backend.so: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+lib/libcuda_gpu_backend.so: /usr/local/cuda-9.2/lib64/libcudart_static.a
 lib/libcuda_gpu_backend.so: /usr/lib/x86_64-linux-gnu/librt.so
 lib/libcuda_gpu_backend.so: CMakeFiles/cuda_gpu_backend.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX shared library lib/libcuda_gpu_backend.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library lib/libcuda_gpu_backend.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cuda_gpu_backend.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -358,11 +404,6 @@ CMakeFiles/cuda_gpu_backend.dir/build: lib/libcuda_gpu_backend.so
 .PHONY : CMakeFiles/cuda_gpu_backend.dir/build
 
 CMakeFiles/cuda_gpu_backend.dir/requires: CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o.requires
-CMakeFiles/cuda_gpu_backend.dir/requires: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o.requires
-CMakeFiles/cuda_gpu_backend.dir/requires: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o.requires
-CMakeFiles/cuda_gpu_backend.dir/requires: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o.requires
-CMakeFiles/cuda_gpu_backend.dir/requires: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o.requires
-CMakeFiles/cuda_gpu_backend.dir/requires: CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o.requires
 
 .PHONY : CMakeFiles/cuda_gpu_backend.dir/requires
 
@@ -371,19 +412,6 @@ CMakeFiles/cuda_gpu_backend.dir/clean:
 .PHONY : CMakeFiles/cuda_gpu_backend.dir/clean
 
 CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_mgpucontext.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_work_unittests.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_aggregation.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_bit_operations.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_bitmap_set_operation.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_column_algebra.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_conversion_operations.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_fetch_join.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_join.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_selection.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_gpu_util.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_positionlist_set_operation.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_hash_functions.cu.o
-CMakeFiles/cuda_gpu_backend.dir/depend: CMakeFiles/cuda_gpu_backend_generated_hash_table.cu.o
-	cd /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/sankul/Hawk-VLDBJ-master/source && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sankul/Hawk-VLDBJ-master/source /home/sankul/Hawk-VLDBJ-master/source /home/sankul/Hawk-VLDBJ-master/source /home/sankul/Hawk-VLDBJ-master/source /home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/cuda_gpu_backend.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cuda_gpu_backend.dir/depend
 

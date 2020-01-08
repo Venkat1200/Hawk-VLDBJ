@@ -32,17 +32,17 @@ CT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
 //! \brief handler of exit() call
 void exit_cleanup(void)
 {
-    std::cout << std::flush;
+    //std::cout << std::flush;
 
-	restore_signal_handlers();
+	//restore_signal_handlers();
 
    // this replaces same call in cleanup() from util.h
-   PCM::getInstance()->cleanup(); // this replaces same call in cleanup() from util.h
+   //PCM::getInstance()->cleanup(); // this replaces same call in cleanup() from util.h
 
 //TODO: delete other shared objects.... if any.
 
 // now terminate the program immediately
-    _exit(EXIT_SUCCESS);
+    //_exit(EXIT_SUCCESS);
 }
 
 #ifdef _MSC_VER

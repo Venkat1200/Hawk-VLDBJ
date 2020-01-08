@@ -29,6 +29,7 @@ const ColumnPtr LookupColumn::getLookupArrayforColumnbyName(
         cout << "Found Column " << attr.second << " in Table "
              << table_->getName() << endl;
       col = columns[i];
+	cout<<"I am in column now ";
     }
   }
 

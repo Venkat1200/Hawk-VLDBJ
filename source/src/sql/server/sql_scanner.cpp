@@ -1,6 +1,6 @@
-#line 2 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_scanner.cpp"
+#line 2 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_scanner.cpp"
 
-#line 4 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_scanner.cpp"
+#line 4 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_scanner.cpp"
 
 #define  YY_INT_ALIGNED short int
 
@@ -1148,7 +1148,7 @@ typedef Parser::semantic_type YYSTYPE;
 		result = 1;			\
 	}					\
 } while (0)
-#line 1152 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_scanner.cpp"
+#line 1152 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_scanner.cpp"
 /*
  * Options
  */
@@ -1156,7 +1156,7 @@ typedef Parser::semantic_type YYSTYPE;
 /*
  * Rules
  */
-#line 1160 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_scanner.cpp"
+#line 1160 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_scanner.cpp"
 
 #define INITIAL 0
 
@@ -1434,7 +1434,7 @@ YY_DECL
 #line 87 "lib/cogadb/src/sql/server/sql_scanner.lpp"
 	/* literal keyword tokens */
 
-#line 1438 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_scanner.cpp"
+#line 1438 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_scanner.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -2210,7 +2210,7 @@ YY_RULE_SETUP
 #line 307 "lib/cogadb/src/sql/server/sql_scanner.lpp"
 ECHO;
 	YY_BREAK
-#line 2214 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_scanner.cpp"
+#line 2214 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_scanner.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 

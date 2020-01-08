@@ -1,13 +1,13 @@
 # Target labels
  gtest
 # Source files and their labels
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/gtest
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/gtest.rule
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/CMakeFiles/gtest-complete.rule
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-stamp/gtest-install.rule
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-stamp/gtest-mkdir.rule
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-stamp/gtest-download.rule
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-stamp/gtest-update.rule
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-stamp/gtest-patch.rule
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-stamp/gtest-configure.rule
-/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-stamp/gtest-build.rule
+/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/gtest
+/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/gtest.rule
+/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/gtest-complete.rule
+/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-stamp/gtest-install.rule
+/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-stamp/gtest-mkdir.rule
+/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-stamp/gtest-download.rule
+/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-stamp/gtest-update.rule
+/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-stamp/gtest-patch.rule
+/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-stamp/gtest-configure.rule
+/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-stamp/gtest-build.rule
