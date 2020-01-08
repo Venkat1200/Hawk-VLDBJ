@@ -31,18 +31,18 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/stack.hh
+ ** \file /home/sankul/Hawk-VLDBJ-master/source/src/sql/server/stack.hh
  ** Define the CoGaDB::SQL::stack class.
  */
 
-#ifndef YY_COGADB_SQL_SCANNER_HOME_GURUMURT_PROJECTS_COGADB_HAWK_VLDBJ_SOURCE_SRC_SQL_SERVER_STACK_HH_INCLUDED
-# define YY_COGADB_SQL_SCANNER_HOME_GURUMURT_PROJECTS_COGADB_HAWK_VLDBJ_SOURCE_SRC_SQL_SERVER_STACK_HH_INCLUDED
+#ifndef YY_COGADB_SQL_SCANNER_HOME_SANKUL_HAWK_VLDBJ_MASTER_SOURCE_SRC_SQL_SERVER_STACK_HH_INCLUDED
+# define YY_COGADB_SQL_SCANNER_HOME_SANKUL_HAWK_VLDBJ_MASTER_SOURCE_SRC_SQL_SERVER_STACK_HH_INCLUDED
 
 # include <vector>
 
 #line 14 "lib/cogadb/src/sql/server/sql_parser.ypp" // stack.hh:132
 namespace CoGaDB { namespace SQL {
-#line 46 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/stack.hh" // stack.hh:132
+#line 46 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/stack.hh" // stack.hh:132
   template <class T, class S = std::vector<T> >
   class stack
   {
@@ -152,6 +152,6 @@ namespace CoGaDB { namespace SQL {
 
 #line 14 "lib/cogadb/src/sql/server/sql_parser.ypp" // stack.hh:132
 } } // CoGaDB::SQL
-#line 156 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/stack.hh" // stack.hh:132
+#line 156 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/stack.hh" // stack.hh:132
 
-#endif // !YY_COGADB_SQL_SCANNER_HOME_GURUMURT_PROJECTS_COGADB_HAWK_VLDBJ_SOURCE_SRC_SQL_SERVER_STACK_HH_INCLUDED
+#endif // !YY_COGADB_SQL_SCANNER_HOME_SANKUL_HAWK_VLDBJ_MASTER_SOURCE_SRC_SQL_SERVER_STACK_HH_INCLUDED

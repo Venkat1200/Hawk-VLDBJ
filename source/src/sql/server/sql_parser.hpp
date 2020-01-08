@@ -31,14 +31,14 @@
 // version 2.2 of Bison.
 
 /**
- ** \file /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_parser.hpp
+ ** \file /home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_parser.hpp
  ** Define the CoGaDB::SQL::parser class.
  */
 
 // C++ LALR(1) parser skeleton written by Akim Demaille.
 
-#ifndef YY_COGADB_SQL_SCANNER_HOME_GURUMURT_PROJECTS_COGADB_HAWK_VLDBJ_SOURCE_SRC_SQL_SERVER_SQL_PARSER_HPP_INCLUDED
-# define YY_COGADB_SQL_SCANNER_HOME_GURUMURT_PROJECTS_COGADB_HAWK_VLDBJ_SOURCE_SRC_SQL_SERVER_SQL_PARSER_HPP_INCLUDED
+#ifndef YY_COGADB_SQL_SCANNER_HOME_SANKUL_HAWK_VLDBJ_MASTER_SOURCE_SRC_SQL_SERVER_SQL_PARSER_HPP_INCLUDED
+# define YY_COGADB_SQL_SCANNER_HOME_SANKUL_HAWK_VLDBJ_MASTER_SOURCE_SRC_SQL_SERVER_SQL_PARSER_HPP_INCLUDED
 // //                    "%code requires" blocks.
 #line 24 "lib/cogadb/src/sql/server/sql_parser.ypp" // lalr1.cc:377
 
@@ -71,7 +71,7 @@ namespace CoGaDB {
 
 #include "sql/server/sql_parsetree.hpp"
 
-#line 75 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_parser.hpp" // lalr1.cc:377
+#line 75 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_parser.hpp" // lalr1.cc:377
 
 
 # include <cstdlib> // std::abort
@@ -143,7 +143,7 @@ namespace CoGaDB {
 
 #line 14 "lib/cogadb/src/sql/server/sql_parser.ypp" // lalr1.cc:377
 namespace CoGaDB { namespace SQL {
-#line 147 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_parser.hpp" // lalr1.cc:377
+#line 147 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_parser.hpp" // lalr1.cc:377
 
 
 
@@ -205,7 +205,7 @@ namespace CoGaDB { namespace SQL {
 	ParseTree::ScalarExpressionList	*scalar_expression_list;
 	ParseTree::SelectFrom			*select_from;
 
-#line 209 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_parser.hpp" // lalr1.cc:377
+#line 209 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_parser.hpp" // lalr1.cc:377
     };
 #else
     typedef YYSTYPE semantic_type;
@@ -640,9 +640,9 @@ namespace CoGaDB { namespace SQL {
 
 #line 14 "lib/cogadb/src/sql/server/sql_parser.ypp" // lalr1.cc:377
 } } // CoGaDB::SQL
-#line 644 "/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/src/sql/server/sql_parser.hpp" // lalr1.cc:377
+#line 644 "/home/sankul/Hawk-VLDBJ-master/source/src/sql/server/sql_parser.hpp" // lalr1.cc:377
 
 
 
 
-#endif // !YY_COGADB_SQL_SCANNER_HOME_GURUMURT_PROJECTS_COGADB_HAWK_VLDBJ_SOURCE_SRC_SQL_SERVER_SQL_PARSER_HPP_INCLUDED
+#endif // !YY_COGADB_SQL_SCANNER_HOME_SANKUL_HAWK_VLDBJ_MASTER_SOURCE_SRC_SQL_SERVER_SQL_PARSER_HPP_INCLUDED

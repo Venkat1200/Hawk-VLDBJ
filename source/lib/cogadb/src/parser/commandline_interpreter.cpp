@@ -206,14 +206,14 @@ bool execShellCommand(const std::string &file_name, ClientPtr client) {
 }
 
 bool printHistory(ClientPtr client) {
-//  std::ostream &out = client->getOutputStream();
-//  HIST_ENTRY **history = history_list();
-//  if (!history) return false;
-//  //        int length=history_length();
-//  out << "History: " << endl;
-//  for (int i = 0; i < history_length; ++i) {
-//    out << "\t" << history[i]->line << endl;
-//  }
+  //std::ostream &out = client->getOutputStream();
+  //HIST_ENTRY **history = history_list();
+  //if (!history) return false;
+  //        int length=history_length();
+ // out << "History: " << endl;
+ // for (int i = 0; i < history_length; ++i) {
+  //  out << "\t" << history[i]->line << endl;
+ // }
 
   return true;
 }

@@ -438,7 +438,8 @@ TablePtr two_phase_physical_optimization_selection(
       phy_plan->printResults(true, false, false);  // plan->print();
     }
     // since this is a Table based plan, we can just return the result
-    return phy_plan->getResult();
+ 	  
+	return phy_plan->getResult();
   } else {
     COGADB_FATAL_ERROR("Invalid Parallelization Mode!", "");
     return TablePtr();

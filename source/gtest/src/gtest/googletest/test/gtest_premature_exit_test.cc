@@ -87,7 +87,7 @@ TEST_F(PrematureExitDeathTest, FileExistsDuringExecutionOfDeathTest) {
       // otherwise don't crash, which will cause the main test process
       // to report that the death test has failed.
       if (PrematureExitFileExists()) {
-        exit(1);
+        //exit(1);
       }
     }, "");
 }

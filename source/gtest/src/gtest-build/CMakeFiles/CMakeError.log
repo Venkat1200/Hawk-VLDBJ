@@ -1,26 +1,26 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp
+Change Dir: /home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_8a270/fast"
-make[3]: Entering directory '/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTC_8a270.dir/build.make CMakeFiles/cmTC_8a270.dir/build
-make[4]: Entering directory '/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8a270.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_8a270.dir/CheckSymbolExists.c.o   -c /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_8a270
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a270.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_8a270.dir/CheckSymbolExists.c.o  -o cmTC_8a270 
-CMakeFiles/cmTC_8a270.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_cb47f/fast"
+make[3]: Entering directory '/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_cb47f.dir/build.make CMakeFiles/cmTC_cb47f.dir/build
+make[4]: Entering directory '/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb47f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cb47f.dir/CheckSymbolExists.c.o   -c /home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_cb47f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb47f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_cb47f.dir/CheckSymbolExists.c.o  -o cmTC_cb47f 
+CMakeFiles/cmTC_cb47f.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_8a270.dir/build.make:97: recipe for target 'cmTC_8a270' failed
-make[4]: *** [cmTC_8a270] Error 1
-make[4]: Leaving directory '/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_8a270/fast' failed
-make[3]: *** [cmTC_8a270/fast] Error 2
-make[3]: Leaving directory '/home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
+CMakeFiles/cmTC_cb47f.dir/build.make:97: recipe for target 'cmTC_cb47f' failed
+make[4]: *** [cmTC_cb47f] Error 1
+make[4]: Leaving directory '/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_cb47f/fast' failed
+make[3]: *** [cmTC_cb47f/fast] Error 2
+make[3]: Leaving directory '/home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp'
 
-File /home/gurumurt/projects/CoGaDB/Hawk-VLDBJ/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/sankul/Hawk-VLDBJ-master/source/gtest/src/gtest-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 

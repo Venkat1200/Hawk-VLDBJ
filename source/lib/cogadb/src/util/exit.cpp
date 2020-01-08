@@ -16,15 +16,16 @@ void callGlobalCleanupRoutines() {
 }
 
 void exit(int status) {
-  callGlobalCleanupRoutines();
-  if (status != EXIT_SUCCESS) {
+#callGlobalCleanupRoutines();
+//(status != EXIT_SUCCESS)
+    {
 #ifndef __APPLE__
-    quick_exit(status);
+ //   quick_exit(status);
 #else
-    abort();
+ //abort();
 #endif
   }
 
-  std::exit(status);
+  //std::exit(status);
 }
 }

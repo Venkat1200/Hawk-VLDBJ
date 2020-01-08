@@ -1,6 +1,5 @@
 
-//#include <boost/tr1/memory.hpp>
-#include <boost/compute/memory.hpp>
+#include <boost/tr1/memory.hpp>
 #include <query_compilation/predicate_expression.hpp>
 #include <query_compilation/predicate_specification.hpp>
 

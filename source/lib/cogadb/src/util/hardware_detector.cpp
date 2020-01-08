@@ -6,10 +6,8 @@
 #include <boost/program_options.hpp>
 #include <fstream>
 
-#ifdef ENABLE_GPU_ACCELERATION
 #include <cuda.h>
 #include <cuda_runtime_api.h>
-#endif
 
 namespace CoGaDB {
 

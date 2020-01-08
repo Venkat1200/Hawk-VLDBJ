@@ -1,1 +1,0 @@
-/usr/bin/c++   -fopenmp -I/usr/lib/llvm-3.9/include   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -msse4.1 -std=c++11   -L/usr/lib/llvm-3.9/lib -rdynamic CMakeFiles/gpu_memory_allocator_generated_gpu_memory_allocator.cu.o  -o bin/gpu_memory_allocator -Wl,-Bstatic -lcudart_static -Wl,-Bdynamic -lpthread -ldl -lrt 

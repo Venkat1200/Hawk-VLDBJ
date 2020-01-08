@@ -44,3 +44,13 @@ source/config.h
 source/Makefile
 
 source/.idea/workspace.xml
+
+source/cogadb/cogadb_reference_databases_v1/
+
+source/cogadb/cogadb_reference_databases_v1.tar.gz
+
+source/CMakeFiles/
+
+source/bin/
+
+source/output/

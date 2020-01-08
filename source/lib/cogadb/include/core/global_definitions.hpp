@@ -46,7 +46,8 @@
 
 namespace CoGaDB {
   void printStackTrace(std::ostream& out);
-  void exit(int status) __attribute__((noreturn));
+
+#void exit(int status) __attribute__((noreturn));
 }
 
 #define COGADB_WARNING(X, Y)                                        \
