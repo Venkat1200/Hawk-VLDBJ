@@ -1,5 +1,0 @@
-/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/rebuild_cache.dir
-/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/edit_cache.dir
-/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/source.dir
-/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/package_source.dir
-/home/sankul/Hawk-VLDBJ-master/source/CMakeFiles/package.dir

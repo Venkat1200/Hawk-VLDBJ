@@ -1,4 +1,0 @@
-/home/sankul/clion-2019.3.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE= -G "CodeBlocks - Unix Makefiles" /home/sankul/Hawk-VLDBJ-master/source
--- Configuring done
--- Generating done
--- Build files have been written to: /home/sankul/Hawk-VLDBJ-master/source
