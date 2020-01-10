@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+source/CMakeFiles/
+
+source/bin/
+
+source/doc/
+
+source/gtest/
+
+source/test/
+
+source/CMakeCache\.txt

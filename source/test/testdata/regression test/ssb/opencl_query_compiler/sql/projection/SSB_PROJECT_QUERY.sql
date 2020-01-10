@@ -1,1 +1,0 @@
-select LO_QUANTITY, LO_DISCOUNT, LO_REVENUE from lineorder where LO_QUANTITY<25 AND lo_discount<=3 AND lo_discount>=1 AND lo_revenue>4900000;

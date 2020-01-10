@@ -157,14 +157,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(CMAKE_COMMAND) -E cmake_progress_start /home/gurumurt/Hawk-VLDBJ/source/CMakeFiles /home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/CMakeFiles/progress.marks
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 external/IntelPerformanceCounterMonitorV2.7/all
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(CMAKE_COMMAND) -E cmake_progress_start /home/gurumurt/Hawk-VLDBJ/source/CMakeFiles /home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/unittests/CMakeFiles/progress.marks
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 lib/cogadb/src/unittests/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gurumurt/Hawk-VLDBJ/source/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 external/IntelPerformanceCounterMonitorV2.7/clean
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 lib/cogadb/src/unittests/clean
 .PHONY : clean
 
 # The main clean target
@@ -174,12 +174,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 external/IntelPerformanceCounterMonitorV2.7/preinstall
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 lib/cogadb/src/unittests/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 external/IntelPerformanceCounterMonitorV2.7/preinstall
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 lib/cogadb/src/unittests/preinstall
 .PHONY : preinstall/fast
 
 # clear depends

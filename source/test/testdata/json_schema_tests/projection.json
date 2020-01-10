@@ -1,8 +1,0 @@
-{
-    "QUERY_PLAN":{
-        "OPERATOR_NAME":"PROJECTION",
-        "ATTRIBUTES": [],
-        "LEFT_CHILD": {},
-        "RIGHT_CHILD": null
-    }
-}

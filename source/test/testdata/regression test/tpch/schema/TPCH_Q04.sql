@@ -1,1 +1,0 @@
-create table test_tpch_q04 (O_ORDERPRIORITY VARCHAR, ORDER_COUNT INT);

@@ -111,17 +111,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -132,6 +121,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -157,14 +157,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(CMAKE_COMMAND) -E cmake_progress_start /home/gurumurt/Hawk-VLDBJ/source/CMakeFiles /home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/CMakeFiles/progress.marks
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 external/IntelPerformanceCounterMonitorV2.7/all
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(CMAKE_COMMAND) -E cmake_progress_start /home/gurumurt/Hawk-VLDBJ/source/CMakeFiles /home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/CMakeFiles/progress.marks
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 tools/cogadbd/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gurumurt/Hawk-VLDBJ/source/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 external/IntelPerformanceCounterMonitorV2.7/clean
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 tools/cogadbd/clean
 .PHONY : clean
 
 # The main clean target
@@ -174,18 +174,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 external/IntelPerformanceCounterMonitorV2.7/preinstall
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 tools/cogadbd/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 external/IntelPerformanceCounterMonitorV2.7/preinstall
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 tools/cogadbd/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
 	cd /home/gurumurt/Hawk-VLDBJ/source && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+tools/cogadbd/CMakeFiles/cogadbd.dir/rule:
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 tools/cogadbd/CMakeFiles/cogadbd.dir/rule
+.PHONY : tools/cogadbd/CMakeFiles/cogadbd.dir/rule
+
+# Convenience name for target.
+cogadbd: tools/cogadbd/CMakeFiles/cogadbd.dir/rule
+
+.PHONY : cogadbd
+
+# fast build rule for target.
+cogadbd/fast:
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f tools/cogadbd/CMakeFiles/cogadbd.dir/build.make tools/cogadbd/CMakeFiles/cogadbd.dir/build
+.PHONY : cogadbd/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f tools/cogadbd/CMakeFiles/cogadbd.dir/build.make tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f tools/cogadbd/CMakeFiles/cogadbd.dir/build.make tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f tools/cogadbd/CMakeFiles/cogadbd.dir/build.make tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -198,10 +240,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... install/strip"
+	@echo "... cogadbd"
 	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... install"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

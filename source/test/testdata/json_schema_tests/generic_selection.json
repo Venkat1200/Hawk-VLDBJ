@@ -1,8 +1,0 @@
-{
-  "QUERY_PLAN":{
-      "OPERATOR_NAME": "GENERIC_SELECTION",
-      "PREDICATE": {},
-      "LEFT_CHILD": {},
-      "RIGHT_CHILD": null
-  }
-}
