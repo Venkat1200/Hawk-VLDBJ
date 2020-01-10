@@ -93,6 +93,9 @@ test/opencl_query_compiler_ssb_projection-tests: test/CMakeFiles/opencl_query_co
 test/opencl_query_compiler_ssb_projection-tests: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/opencl_query_compiler_ssb_projection-tests: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/opencl_query_compiler_ssb_projection-tests: lib/libcogadb.so
+test/opencl_query_compiler_ssb_projection-tests: lib/libcuda_gpu_backend.so
+test/opencl_query_compiler_ssb_projection-tests: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/opencl_query_compiler_ssb_projection-tests: /usr/lib/x86_64-linux-gnu/librt.so
 test/opencl_query_compiler_ssb_projection-tests: lib/hype/lib/libhype.so
 test/opencl_query_compiler_ssb_projection-tests: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/opencl_query_compiler_ssb_projection-tests: /usr/lib/x86_64-linux-gnu/libboost_system.so

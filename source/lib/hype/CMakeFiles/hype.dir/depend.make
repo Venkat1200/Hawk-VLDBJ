@@ -505,11 +505,10 @@ lib/hype/CMakeFiles/hype.dir/src/operation.cpp.o: lib/hype/include/core/statisti
 lib/hype/CMakeFiles/hype.dir/src/operation.cpp.o: lib/hype/include/core/time_measurement.hpp
 
 lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/src/operator.cpp
-lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/../cogadb/include/core/global_definitions.hpp
-lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/../cogadb/include/statistics/statistics_manager.hpp
-lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/../cogadb/include/util/functions.hpp
-lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/../cogadb/include/util/hardware_detector.hpp
-lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/config.h
+lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/cogadb/include/core/global_definitions.hpp
+lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/cogadb/include/statistics/statistics_manager.hpp
+lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/cogadb/include/util/functions.hpp
+lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/cogadb/include/util/hardware_detector.hpp
 lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/include/config/configuration.hpp
 lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/include/config/exports.hpp
 lib/hype/CMakeFiles/hype.dir/src/operator.cpp.o: lib/hype/include/config/global_definitions.hpp

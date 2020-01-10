@@ -93,6 +93,9 @@ test/bulk_execution_tpch-tests: test/CMakeFiles/bulk_execution_tpch-tests.dir/bu
 test/bulk_execution_tpch-tests: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/bulk_execution_tpch-tests: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/bulk_execution_tpch-tests: lib/libcogadb.so
+test/bulk_execution_tpch-tests: lib/libcuda_gpu_backend.so
+test/bulk_execution_tpch-tests: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/bulk_execution_tpch-tests: /usr/lib/x86_64-linux-gnu/librt.so
 test/bulk_execution_tpch-tests: lib/hype/lib/libhype.so
 test/bulk_execution_tpch-tests: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/bulk_execution_tpch-tests: /usr/lib/x86_64-linux-gnu/libboost_system.so

@@ -93,6 +93,9 @@ test/query_compiler_ssb-tests: test/CMakeFiles/query_compiler_ssb-tests.dir/buil
 test/query_compiler_ssb-tests: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/query_compiler_ssb-tests: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/query_compiler_ssb-tests: lib/libcogadb.so
+test/query_compiler_ssb-tests: lib/libcuda_gpu_backend.so
+test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/librt.so
 test/query_compiler_ssb-tests: lib/hype/lib/libhype.so
 test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libboost_system.so

@@ -6,5 +6,5 @@ CXX_FLAGS =  -fopenmp -I/usr/lib/llvm-3.6/include  -DNDEBUG -D_GNU_SOURCE -D__ST
 
 CXX_DEFINES = -DBOOST_COMPUTE_HAVE_THREAD_LOCAL -DBOOST_COMPUTE_THREAD_SAFE -DCL_USE_DEPRECATED_OPENCL_1_1_APIS -DCL_USE_DEPRECATED_OPENCL_1_2_APIS -DHAVE_CONFIG_H -DHYPE_MAKE_SHARED -DLLVM_VERSION=36
 
-CXX_INCLUDES = -I/home/gurumurt/Hawk-VLDBJ/source/external -I/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googletest/include -I/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googlemock/include -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/../cogadb/include -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype 
+CXX_INCLUDES = -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include -I/home/gurumurt/Hawk-VLDBJ/source/external -I/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/include -I/home/gurumurt/Hawk-VLDBJ/source/external/cub-1.4.1 -I/home/gurumurt/Hawk-VLDBJ/source/external/moderngpu/include -I/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googletest/include -I/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googlemock/include -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/../cogadb/include -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype 
 

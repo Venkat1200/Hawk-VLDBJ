@@ -11,7 +11,7 @@
 /*
  * Configuration results
  */
-/* #undef HAVE_CUDAMEMGETINFO */
+#define HAVE_CUDAMEMGETINFO
 #define LIBREADLINE_FOUND
 #define BAM_FOUND
 /* #undef PERSEUS_FOUND */
@@ -19,7 +19,7 @@
 /*
  * User-configured options
  */
-/* #undef ENABLE_GPU_ACCELERATION */
+#define ENABLE_GPU_ACCELERATION
 #define ENABLE_TWO_PHASE_PHYSICAL_OPTIMIZATION
 /* #undef ENABLE_SIMD_ACCELERATION */
 #define ENABLE_BRANCHING_SCAN

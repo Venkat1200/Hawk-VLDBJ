@@ -8,12 +8,12 @@
 using namespace std;
 
 char* gpu_mem = NULL;
-
+cudaError_t err;
 void term(int sig)
 {
     cout << "Received signal number: " << sig << endl;
     if(sig==15){
-        cudaError_t err=cudaSuccess;
+        err=cudaSuccess;
         if(gpu_mem) 
             err = cudaFree(gpu_mem); 	
         assert(err==cudaSuccess);
@@ -47,7 +47,7 @@ int main(int argc, char* argv[]){
 
  size_t size_in_bytes = boost::lexical_cast<size_t>(argv[1]);
 
- cudaError_t err = cudaMalloc((void**)&gpu_mem, size_in_bytes);
+ err = cudaMalloc((void**)&gpu_mem, size_in_bytes);
  assert(err==cudaSuccess);
 
  wait_forever();

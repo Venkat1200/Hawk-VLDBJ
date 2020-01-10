@@ -48,7 +48,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcogadb.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcogadb.so"
-         OLD_RPATH "/usr/lib/llvm-3.6/lib:/home/gurumurt/Hawk-VLDBJ/source/lib/hype/lib:"
+         OLD_RPATH "/usr/lib/llvm-3.6/lib:/home/gurumurt/Hawk-VLDBJ/source/lib:/home/gurumurt/Hawk-VLDBJ/source/lib/hype/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcogadb.so")
@@ -62,8 +62,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/gurumurt/Hawk-VLDBJ/source/lib/cmake_install.cmake")
   include("/home/gurumurt/Hawk-VLDBJ/source/tools/cmake_install.cmake")
   include("/home/gurumurt/Hawk-VLDBJ/source/doc/cmake_install.cmake")
-  include("/home/gurumurt/Hawk-VLDBJ/source/test/cmake_install.cmake")
-  include("/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/test/cmake_install.cmake")
 
 endif()
 

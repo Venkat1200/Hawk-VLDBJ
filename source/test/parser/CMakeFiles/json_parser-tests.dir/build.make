@@ -93,6 +93,9 @@ test/parser/json_parser-tests: test/parser/CMakeFiles/json_parser-tests.dir/buil
 test/parser/json_parser-tests: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/parser/json_parser-tests: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/parser/json_parser-tests: lib/libcogadb.so
+test/parser/json_parser-tests: lib/libcuda_gpu_backend.so
+test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/librt.so
 test/parser/json_parser-tests: lib/hype/lib/libhype.so
 test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libboost_system.so

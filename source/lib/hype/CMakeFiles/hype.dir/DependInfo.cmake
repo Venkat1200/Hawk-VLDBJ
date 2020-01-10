@@ -84,11 +84,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "lib/hype/include"
   "external"
+  "lib/cogadb/include"
+  "external/cub-1.4.1"
+  "external/moderngpu/include"
   "gtest/src/gtest/googletest/include"
   "gtest/src/gtest/googlemock/include"
   "lib/hype/alglib/cpp/src"
-  "lib/hype/include"
   "lib/hype/../cogadb/include"
   "lib/hype"
   )

@@ -71,7 +71,7 @@ set(COGADB_INCLUDE_DIRS
 # any installed one.
 set(HyPE_DIR "${PROJECT_SOURCE_DIR}/CMake"
     CACHE PATH "The directory containing a CMake configuration file for HyPE.")
-
+include_directories(${PROJECT_SOURCE_DIR}/lib/hype/include)
 find_package(Thrust REQUIRED)
 set(COGADB_INCLUDE_DIRS ${COGADB_INCLUDE_DIRS} ${THRUST_INCLUDE_DIR})
 
@@ -121,12 +121,15 @@ add_definitions(-DCL_USE_DEPRECATED_OPENCL_1_2_APIS -DCL_USE_DEPRECATED_OPENCL_1
 
 # Configure CUDA
 option(ENABLE_GPU_ACCELERATION "GPU acceleration enabled" OFF)
-
+include_directories(${CMAKE_SOURCE_DIR}/lib/cogadb/include)
+include_directories(${PROJECT_SOURCE_DIR}/external/cub-1.4.1)
+include_directories(${PROJECT_SOURCE_DIR}/external/moderngpu/include)
 if(ENABLE_GPU_ACCELERATION)
+    message(INFO " Enabling GPU Acceleration.")
     set(CUDA_GENERATED_OUTPUT_DIR "${PROJECT_BINARY_DIR}/CMakeFiles")
-    set(CUDA_NVCC_FLAGS "-arch=sm_30"
+    set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -arch=sm_30 -std=c++11"
         CACHE STRING "CUDA nvcc flags (semicolon separated)")
-    find_package(CUDA 6.5 REQUIRED)
+    find_package(CUDA REQUIRED)
 endif ()
 
 # Check for cudaMemGetInfo() availability
@@ -292,7 +295,7 @@ set(CMAKE_C_FLAGS "-std=gnu99")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse4.1")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -fno-omit-frame-pointer -falign-functions=4 -falign-loops=4 -falign-jumps=4 -ftree-vectorize -fexpensive-optimizations -frerun-cse-after-loop  -funroll-loops -frerun-loop-opt -finline-functions")
 
-set(CUDA_NVCC_FLAGS "-rdc=true -gencode arch=compute_35,code=sm_35 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_20,code=sm_20" CACHE STRING "Configures for which GPU Compute Capabilities CoGaDB is compiled.")
+set(CUDA_NVCC_FLAGS "-rdc=true -gencode arch=compute_35,code=sm_35 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_20,code=sm_20,std=c++11" CACHE STRING "Configures for which GPU Compute Capabilities CoGaDB is compiled.")
 
 # set clang binary for query compilation
 execute_process(COMMAND ${LLVM_CONFIG_EXECUTABLE} --prefix OUTPUT_VARIABLE LLVM_INSTALL_PREFIX OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -370,7 +373,7 @@ file(GLOB_RECURSE COGADB_HEADER_FILES "lib/cogadb/include/*.h"
     "lib/cogadb/include/*.hpp")
 
 # enable c++11
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ")
 
 if(ENABLE_GPU_ACCELERATION)
     cuda_add_library(cogadb ${COGADB_SOURCE_FILES} ${COGADB_HEADER_FILES})
@@ -488,11 +491,11 @@ if(ENABLE_GPU_ACCELERATION)
     set_target_properties(generic_selection_benchmark PROPERTIES
                           RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 
-    cuda_add_executable(gpu_memory_allocator benchmarks/gpu_memory_allocator.cu)
+#    cuda_add_executable(gpu_memory_allocator benchmarks/gpu_memory_allocator.cu)
     #set_target_properties(gpu_memory_allocator PROPERTIES LINKER_LANGUAGE CXX)
     # put executable in bin/
-    set_target_properties(gpu_memory_allocator PROPERTIES
-                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+#    set_target_properties(gpu_memory_allocator PROPERTIES
+#                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 else ()
         message(WARNING "GPU acceleration is disabled, I will not build the hybrid CPU/GPU operator benchmarks!")
 endif()
@@ -504,12 +507,12 @@ file(MAKE_DIRECTORY "${PROJECT_BINARY_DIR}/output")
 add_subdirectory(doc)
 
 #unittests
-add_subdirectory(test)
-add_subdirectory(lib/cogadb/test)
+#add_subdirectory(test)
+#add_subdirectory(lib/cogadb/test)
 
-enable_testing()
-add_custom_target(cogadb_tests COMMAND ${CMAKE_CTEST_COMMAND}
-                  DEPENDS ${UNITTESTS})
+#enable_testing()
+#add_custom_target(cogadb_tests COMMAND ${CMAKE_CTEST_COMMAND}
+#                  DEPENDS ${UNITTESTS})
 
 if(APPLE)
   target_link_libraries(cogadb z readline ncurses omp)

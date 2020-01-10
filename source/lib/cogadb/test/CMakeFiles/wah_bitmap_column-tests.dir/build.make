@@ -93,6 +93,9 @@ lib/cogadb/test/wah_bitmap_column-tests: lib/cogadb/test/CMakeFiles/wah_bitmap_c
 lib/cogadb/test/wah_bitmap_column-tests: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 lib/cogadb/test/wah_bitmap_column-tests: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 lib/cogadb/test/wah_bitmap_column-tests: lib/libcogadb.so
+lib/cogadb/test/wah_bitmap_column-tests: lib/libcuda_gpu_backend.so
+lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/librt.so
 lib/cogadb/test/wah_bitmap_column-tests: lib/hype/lib/libhype.so
 lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libboost_system.so

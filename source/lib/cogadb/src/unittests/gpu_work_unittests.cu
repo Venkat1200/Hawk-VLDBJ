@@ -11,12 +11,12 @@
 #include <core/base_column.hpp>
 #include <core/positionlist.hpp>
 #include <cstring>
-#include <unittests/unittests.hpp>
-#include <util/time_measurement.hpp>
+#include "unittests/unittests.hpp"
+#include "util/time_measurement.hpp"
 //#include <cub/cub.cuh>
 //#include <moderngpu/moderngpu.cuh>
 
-//#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
+//#define //gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
 // inline void gpuAssert(cudaError_t code, const char *file, int line, bool
 // abort=true)
 //{
@@ -267,7 +267,7 @@ thrust::device_ptr<T> toDevice(vector<T> data, unsigned long int n) {
 
   cudaError_t err = cudaMemcpy(thrust::raw_pointer_cast(device_data), &data[0],
                                n * sizeof(T), cudaMemcpyHostToDevice);
-  gpuErrchk(err);
+  //gpuErrchk(err);
 
   return device_data;
 }
@@ -278,8 +278,7 @@ std::vector<T> fromDevice(thrust::device_ptr<T> device_data,
   std::vector<T> data(n);
 
   cudaError_t err = cudaMemcpy(&data[0], thrust::raw_pointer_cast(device_data),
-                               n * sizeof(T), cudaMemcpyDeviceToHost);
-  gpuErrchk(err);
+  //gpuErrchk(err);
 
   return data;
 }
@@ -404,7 +403,7 @@ double measurePackingKernel(unsigned long int num_rows_base_table,
 
   for (int i = 0; i <= n; i++) {
     cudaError_t err = cudaMemsetAsync(bitmap.get(), 0, bitmap_size, *stream);
-    gpuErrchk(err);
+    //gpuErrchk(err);
     cudaStreamSynchronize(*stream);
 
     begin = getTimestamp();
@@ -457,7 +456,7 @@ double measureConversionMultipassKernel(unsigned long int num_rows_base_table,
   for (int i = 0; i <= n; i++) {
     cudaError_t err =
         cudaMemsetAsync(flag_array.get(), 0, num_rows_base_table, *stream);
-    gpuErrchk(err);
+    //gpuErrchk(err);
     cudaStreamSynchronize(*stream);
 
     begin = getTimestamp();
@@ -509,7 +508,7 @@ double measureConversionKernel(unsigned long int num_rows_base_table,
   for (int i = 0; i <= n; i++) {
     cudaError_t err =
         cudaMemsetAsync(flag_array.get(), 0, num_rows_base_table, *stream);
-    gpuErrchk(err);
+    //gpuErrchk(err);
     cudaStreamSynchronize(*stream);
 
     begin = getTimestamp();
@@ -561,7 +560,7 @@ double measureConversionBitmapKernel(unsigned long int num_rows_base_table,
   for (int i = 0; i <= n; i++) {
     cudaError_t err = cudaMemsetAsync(bitmap.get(), 0,
                                       number_of_bytes_for_flag_array, *stream);
-    gpuErrchk(err);
+    //gpuErrchk(err);
     cudaStreamSynchronize(*stream);
 
     begin = getTimestamp();
@@ -614,7 +613,7 @@ double measureBinnedConversionKernel(unsigned long int num_rows_base_table,
   for (int i = 0; i <= n; i++) {
     cudaError_t err =
         cudaMemsetAsync(flag_array.get(), 0, num_rows_base_table, *stream);
-    gpuErrchk(err);
+    //gpuErrchk(err);
     cudaStreamSynchronize(*stream);
 
     begin = getTimestamp();
@@ -667,7 +666,7 @@ double measureBinnedConversionHalfKernel(unsigned long int num_rows_base_table,
   for (int i = 0; i <= n; i++) {
     cudaError_t err =
         cudaMemsetAsync(flag_array.get(), 0, num_rows_base_table, *stream);
-    gpuErrchk(err);
+    //gpuErrchk(err);
     cudaStreamSynchronize(*stream);
 
     begin = getTimestamp();
@@ -761,7 +760,7 @@ bool testBinningKernel() {
   cudaError_t err =
       cudaMemsetAsync(flag_array_b.get(), 0,
                       number_flag_array_elements * sizeof(char), *stream);
-  gpuErrchk(err);
+  //gpuErrchk(err);
   cudaStreamSynchronize(*stream);
 
   convert_bins_kernel<<<number_of_blocks, number_of_threads_per_block, 0,

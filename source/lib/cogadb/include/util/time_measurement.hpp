@@ -1,8 +1,8 @@
 #ifndef TIME_MEASUREMENT_HPP
 #define TIME_MEASUREMENT_HPP
 
-#include <cstdint>
-
+//#include <stdint.h>
+#include <cstdint>	//Used with C++11 package
 namespace CoGaDB {
 
   typedef uint64_t Timestamp;

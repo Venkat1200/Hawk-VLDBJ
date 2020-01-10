@@ -93,6 +93,9 @@ test/standard_query_tests: test/CMakeFiles/standard_query_tests.dir/build.make
 test/standard_query_tests: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/standard_query_tests: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/standard_query_tests: lib/libcogadb.so
+test/standard_query_tests: lib/libcuda_gpu_backend.so
+test/standard_query_tests: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/standard_query_tests: /usr/lib/x86_64-linux-gnu/librt.so
 test/standard_query_tests: lib/hype/lib/libhype.so
 test/standard_query_tests: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/standard_query_tests: /usr/lib/x86_64-linux-gnu/libboost_system.so

@@ -91,6 +91,9 @@ cogadbd_EXTERNAL_OBJECTS =
 bin/cogadbd: tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o
 bin/cogadbd: tools/cogadbd/CMakeFiles/cogadbd.dir/build.make
 bin/cogadbd: lib/libcogadb.so
+bin/cogadbd: lib/libcuda_gpu_backend.so
+bin/cogadbd: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+bin/cogadbd: /usr/lib/x86_64-linux-gnu/librt.so
 bin/cogadbd: lib/hype/lib/libhype.so
 bin/cogadbd: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 bin/cogadbd: /usr/lib/x86_64-linux-gnu/libboost_system.so

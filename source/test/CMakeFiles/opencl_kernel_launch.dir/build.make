@@ -93,6 +93,9 @@ test/opencl_kernel_launch: test/CMakeFiles/opencl_kernel_launch.dir/build.make
 test/opencl_kernel_launch: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/opencl_kernel_launch: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/opencl_kernel_launch: lib/libcogadb.so
+test/opencl_kernel_launch: lib/libcuda_gpu_backend.so
+test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/librt.so
 test/opencl_kernel_launch: lib/hype/lib/libhype.so
 test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libboost_system.so

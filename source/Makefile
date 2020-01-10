@@ -100,6 +100,40 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -120,40 +154,6 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -188,17 +188,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named sql_test_ssb_diagrams
+# Target rules for targets named doc
 
 # Build rule for target.
-sql_test_ssb_diagrams: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sql_test_ssb_diagrams
-.PHONY : sql_test_ssb_diagrams
+doc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doc
+.PHONY : doc
 
 # fast build rule for target.
-sql_test_ssb_diagrams/fast:
-	$(MAKE) -f CMakeFiles/sql_test_ssb_diagrams.dir/build.make CMakeFiles/sql_test_ssb_diagrams.dir/build
-.PHONY : sql_test_ssb_diagrams/fast
+doc/fast:
+	$(MAKE) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/build
+.PHONY : doc/fast
+
+#=============================================================================
+# Target rules for targets named generic_selection_benchmark
+
+# Build rule for target.
+generic_selection_benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 generic_selection_benchmark
+.PHONY : generic_selection_benchmark
+
+# fast build rule for target.
+generic_selection_benchmark/fast:
+	$(MAKE) -f CMakeFiles/generic_selection_benchmark.dir/build.make CMakeFiles/generic_selection_benchmark.dir/build
+.PHONY : generic_selection_benchmark/fast
+
+#=============================================================================
+# Target rules for targets named aggregation_benchmark
+
+# Build rule for target.
+aggregation_benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 aggregation_benchmark
+.PHONY : aggregation_benchmark
+
+# fast build rule for target.
+aggregation_benchmark/fast:
+	$(MAKE) -f CMakeFiles/aggregation_benchmark.dir/build.make CMakeFiles/aggregation_benchmark.dir/build
+.PHONY : aggregation_benchmark/fast
 
 #=============================================================================
 # Target rules for targets named cogadb
@@ -253,30 +279,69 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named cogadb_tests
+# Target rules for targets named selection_benchmark
 
 # Build rule for target.
-cogadb_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cogadb_tests
-.PHONY : cogadb_tests
+selection_benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 selection_benchmark
+.PHONY : selection_benchmark
 
 # fast build rule for target.
-cogadb_tests/fast:
-	$(MAKE) -f CMakeFiles/cogadb_tests.dir/build.make CMakeFiles/cogadb_tests.dir/build
-.PHONY : cogadb_tests/fast
+selection_benchmark/fast:
+	$(MAKE) -f CMakeFiles/selection_benchmark.dir/build.make CMakeFiles/selection_benchmark.dir/build
+.PHONY : selection_benchmark/fast
 
 #=============================================================================
-# Target rules for targets named doc
+# Target rules for targets named sql_test_ssb_diagrams
 
 # Build rule for target.
-doc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 doc
-.PHONY : doc
+sql_test_ssb_diagrams: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sql_test_ssb_diagrams
+.PHONY : sql_test_ssb_diagrams
 
 # fast build rule for target.
-doc/fast:
-	$(MAKE) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/build
-.PHONY : doc/fast
+sql_test_ssb_diagrams/fast:
+	$(MAKE) -f CMakeFiles/sql_test_ssb_diagrams.dir/build.make CMakeFiles/sql_test_ssb_diagrams.dir/build
+.PHONY : sql_test_ssb_diagrams/fast
+
+#=============================================================================
+# Target rules for targets named sort_benchmark
+
+# Build rule for target.
+sort_benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sort_benchmark
+.PHONY : sort_benchmark
+
+# fast build rule for target.
+sort_benchmark/fast:
+	$(MAKE) -f CMakeFiles/sort_benchmark.dir/build.make CMakeFiles/sort_benchmark.dir/build
+.PHONY : sort_benchmark/fast
+
+#=============================================================================
+# Target rules for targets named cuda_gpu_backend
+
+# Build rule for target.
+cuda_gpu_backend: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cuda_gpu_backend
+.PHONY : cuda_gpu_backend
+
+# fast build rule for target.
+cuda_gpu_backend/fast:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/build
+.PHONY : cuda_gpu_backend/fast
+
+#=============================================================================
+# Target rules for targets named join_benchmark
+
+# Build rule for target.
+join_benchmark: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 join_benchmark
+.PHONY : join_benchmark
+
+# fast build rule for target.
+join_benchmark/fast:
+	$(MAKE) -f CMakeFiles/join_benchmark.dir/build.make CMakeFiles/join_benchmark.dir/build
+.PHONY : join_benchmark/fast
 
 #=============================================================================
 # Target rules for targets named hype
@@ -356,265 +421,140 @@ cogadb-doc/fast:
 	$(MAKE) -f doc/CMakeFiles/cogadb-doc.dir/build.make doc/CMakeFiles/cogadb-doc.dir/build
 .PHONY : cogadb-doc/fast
 
-#=============================================================================
-# Target rules for targets named opencl_kernel_launch
+benchmarks/aggregation_benchmark.o: benchmarks/aggregation_benchmark.cpp.o
 
-# Build rule for target.
-opencl_kernel_launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencl_kernel_launch
-.PHONY : opencl_kernel_launch
+.PHONY : benchmarks/aggregation_benchmark.o
 
-# fast build rule for target.
-opencl_kernel_launch/fast:
-	$(MAKE) -f test/CMakeFiles/opencl_kernel_launch.dir/build.make test/CMakeFiles/opencl_kernel_launch.dir/build
-.PHONY : opencl_kernel_launch/fast
+# target to build an object file
+benchmarks/aggregation_benchmark.cpp.o:
+	$(MAKE) -f CMakeFiles/aggregation_benchmark.dir/build.make CMakeFiles/aggregation_benchmark.dir/benchmarks/aggregation_benchmark.cpp.o
+.PHONY : benchmarks/aggregation_benchmark.cpp.o
 
-#=============================================================================
-# Target rules for targets named json_query_compiler_interface-tests
+benchmarks/aggregation_benchmark.i: benchmarks/aggregation_benchmark.cpp.i
 
-# Build rule for target.
-json_query_compiler_interface-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 json_query_compiler_interface-tests
-.PHONY : json_query_compiler_interface-tests
+.PHONY : benchmarks/aggregation_benchmark.i
 
-# fast build rule for target.
-json_query_compiler_interface-tests/fast:
-	$(MAKE) -f test/CMakeFiles/json_query_compiler_interface-tests.dir/build.make test/CMakeFiles/json_query_compiler_interface-tests.dir/build
-.PHONY : json_query_compiler_interface-tests/fast
+# target to preprocess a source file
+benchmarks/aggregation_benchmark.cpp.i:
+	$(MAKE) -f CMakeFiles/aggregation_benchmark.dir/build.make CMakeFiles/aggregation_benchmark.dir/benchmarks/aggregation_benchmark.cpp.i
+.PHONY : benchmarks/aggregation_benchmark.cpp.i
 
-#=============================================================================
-# Target rules for targets named bulk_execution_ssb-tests
+benchmarks/aggregation_benchmark.s: benchmarks/aggregation_benchmark.cpp.s
 
-# Build rule for target.
-bulk_execution_ssb-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bulk_execution_ssb-tests
-.PHONY : bulk_execution_ssb-tests
+.PHONY : benchmarks/aggregation_benchmark.s
 
-# fast build rule for target.
-bulk_execution_ssb-tests/fast:
-	$(MAKE) -f test/CMakeFiles/bulk_execution_ssb-tests.dir/build.make test/CMakeFiles/bulk_execution_ssb-tests.dir/build
-.PHONY : bulk_execution_ssb-tests/fast
+# target to generate assembly for a file
+benchmarks/aggregation_benchmark.cpp.s:
+	$(MAKE) -f CMakeFiles/aggregation_benchmark.dir/build.make CMakeFiles/aggregation_benchmark.dir/benchmarks/aggregation_benchmark.cpp.s
+.PHONY : benchmarks/aggregation_benchmark.cpp.s
 
-#=============================================================================
-# Target rules for targets named query_compiler_ssb-tests
+benchmarks/generic_selection_benchmark.o: benchmarks/generic_selection_benchmark.cpp.o
 
-# Build rule for target.
-query_compiler_ssb-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 query_compiler_ssb-tests
-.PHONY : query_compiler_ssb-tests
+.PHONY : benchmarks/generic_selection_benchmark.o
 
-# fast build rule for target.
-query_compiler_ssb-tests/fast:
-	$(MAKE) -f test/CMakeFiles/query_compiler_ssb-tests.dir/build.make test/CMakeFiles/query_compiler_ssb-tests.dir/build
-.PHONY : query_compiler_ssb-tests/fast
+# target to build an object file
+benchmarks/generic_selection_benchmark.cpp.o:
+	$(MAKE) -f CMakeFiles/generic_selection_benchmark.dir/build.make CMakeFiles/generic_selection_benchmark.dir/benchmarks/generic_selection_benchmark.cpp.o
+.PHONY : benchmarks/generic_selection_benchmark.cpp.o
 
-#=============================================================================
-# Target rules for targets named opencl_query_compiler_ssb_aggregation-tests
+benchmarks/generic_selection_benchmark.i: benchmarks/generic_selection_benchmark.cpp.i
 
-# Build rule for target.
-opencl_query_compiler_ssb_aggregation-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencl_query_compiler_ssb_aggregation-tests
-.PHONY : opencl_query_compiler_ssb_aggregation-tests
+.PHONY : benchmarks/generic_selection_benchmark.i
 
-# fast build rule for target.
-opencl_query_compiler_ssb_aggregation-tests/fast:
-	$(MAKE) -f test/CMakeFiles/opencl_query_compiler_ssb_aggregation-tests.dir/build.make test/CMakeFiles/opencl_query_compiler_ssb_aggregation-tests.dir/build
-.PHONY : opencl_query_compiler_ssb_aggregation-tests/fast
+# target to preprocess a source file
+benchmarks/generic_selection_benchmark.cpp.i:
+	$(MAKE) -f CMakeFiles/generic_selection_benchmark.dir/build.make CMakeFiles/generic_selection_benchmark.dir/benchmarks/generic_selection_benchmark.cpp.i
+.PHONY : benchmarks/generic_selection_benchmark.cpp.i
 
-#=============================================================================
-# Target rules for targets named bulk_execution_tpch-tests
+benchmarks/generic_selection_benchmark.s: benchmarks/generic_selection_benchmark.cpp.s
 
-# Build rule for target.
-bulk_execution_tpch-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 bulk_execution_tpch-tests
-.PHONY : bulk_execution_tpch-tests
+.PHONY : benchmarks/generic_selection_benchmark.s
 
-# fast build rule for target.
-bulk_execution_tpch-tests/fast:
-	$(MAKE) -f test/CMakeFiles/bulk_execution_tpch-tests.dir/build.make test/CMakeFiles/bulk_execution_tpch-tests.dir/build
-.PHONY : bulk_execution_tpch-tests/fast
+# target to generate assembly for a file
+benchmarks/generic_selection_benchmark.cpp.s:
+	$(MAKE) -f CMakeFiles/generic_selection_benchmark.dir/build.make CMakeFiles/generic_selection_benchmark.dir/benchmarks/generic_selection_benchmark.cpp.s
+.PHONY : benchmarks/generic_selection_benchmark.cpp.s
 
-#=============================================================================
-# Target rules for targets named opencl_query_compiler_ssb_projection-tests
+benchmarks/join_benchmark.o: benchmarks/join_benchmark.cpp.o
 
-# Build rule for target.
-opencl_query_compiler_ssb_projection-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencl_query_compiler_ssb_projection-tests
-.PHONY : opencl_query_compiler_ssb_projection-tests
+.PHONY : benchmarks/join_benchmark.o
 
-# fast build rule for target.
-opencl_query_compiler_ssb_projection-tests/fast:
-	$(MAKE) -f test/CMakeFiles/opencl_query_compiler_ssb_projection-tests.dir/build.make test/CMakeFiles/opencl_query_compiler_ssb_projection-tests.dir/build
-.PHONY : opencl_query_compiler_ssb_projection-tests/fast
+# target to build an object file
+benchmarks/join_benchmark.cpp.o:
+	$(MAKE) -f CMakeFiles/join_benchmark.dir/build.make CMakeFiles/join_benchmark.dir/benchmarks/join_benchmark.cpp.o
+.PHONY : benchmarks/join_benchmark.cpp.o
 
-#=============================================================================
-# Target rules for targets named standard_query_tests
+benchmarks/join_benchmark.i: benchmarks/join_benchmark.cpp.i
 
-# Build rule for target.
-standard_query_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 standard_query_tests
-.PHONY : standard_query_tests
+.PHONY : benchmarks/join_benchmark.i
 
-# fast build rule for target.
-standard_query_tests/fast:
-	$(MAKE) -f test/CMakeFiles/standard_query_tests.dir/build.make test/CMakeFiles/standard_query_tests.dir/build
-.PHONY : standard_query_tests/fast
+# target to preprocess a source file
+benchmarks/join_benchmark.cpp.i:
+	$(MAKE) -f CMakeFiles/join_benchmark.dir/build.make CMakeFiles/join_benchmark.dir/benchmarks/join_benchmark.cpp.i
+.PHONY : benchmarks/join_benchmark.cpp.i
 
-#=============================================================================
-# Target rules for targets named opencl_query_compiler_ssb_groupagg-tests
+benchmarks/join_benchmark.s: benchmarks/join_benchmark.cpp.s
 
-# Build rule for target.
-opencl_query_compiler_ssb_groupagg-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencl_query_compiler_ssb_groupagg-tests
-.PHONY : opencl_query_compiler_ssb_groupagg-tests
+.PHONY : benchmarks/join_benchmark.s
 
-# fast build rule for target.
-opencl_query_compiler_ssb_groupagg-tests/fast:
-	$(MAKE) -f test/CMakeFiles/opencl_query_compiler_ssb_groupagg-tests.dir/build.make test/CMakeFiles/opencl_query_compiler_ssb_groupagg-tests.dir/build
-.PHONY : opencl_query_compiler_ssb_groupagg-tests/fast
+# target to generate assembly for a file
+benchmarks/join_benchmark.cpp.s:
+	$(MAKE) -f CMakeFiles/join_benchmark.dir/build.make CMakeFiles/join_benchmark.dir/benchmarks/join_benchmark.cpp.s
+.PHONY : benchmarks/join_benchmark.cpp.s
 
-#=============================================================================
-# Target rules for targets named vector_at_a_time_test
+benchmarks/selection_benchmark.o: benchmarks/selection_benchmark.cpp.o
 
-# Build rule for target.
-vector_at_a_time_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 vector_at_a_time_test
-.PHONY : vector_at_a_time_test
+.PHONY : benchmarks/selection_benchmark.o
 
-# fast build rule for target.
-vector_at_a_time_test/fast:
-	$(MAKE) -f test/CMakeFiles/vector_at_a_time_test.dir/build.make test/CMakeFiles/vector_at_a_time_test.dir/build
-.PHONY : vector_at_a_time_test/fast
+# target to build an object file
+benchmarks/selection_benchmark.cpp.o:
+	$(MAKE) -f CMakeFiles/selection_benchmark.dir/build.make CMakeFiles/selection_benchmark.dir/benchmarks/selection_benchmark.cpp.o
+.PHONY : benchmarks/selection_benchmark.cpp.o
 
-#=============================================================================
-# Target rules for targets named code_generation_k_means
+benchmarks/selection_benchmark.i: benchmarks/selection_benchmark.cpp.i
 
-# Build rule for target.
-code_generation_k_means: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 code_generation_k_means
-.PHONY : code_generation_k_means
+.PHONY : benchmarks/selection_benchmark.i
 
-# fast build rule for target.
-code_generation_k_means/fast:
-	$(MAKE) -f test/CMakeFiles/code_generation_k_means.dir/build.make test/CMakeFiles/code_generation_k_means.dir/build
-.PHONY : code_generation_k_means/fast
+# target to preprocess a source file
+benchmarks/selection_benchmark.cpp.i:
+	$(MAKE) -f CMakeFiles/selection_benchmark.dir/build.make CMakeFiles/selection_benchmark.dir/benchmarks/selection_benchmark.cpp.i
+.PHONY : benchmarks/selection_benchmark.cpp.i
 
-#=============================================================================
-# Target rules for targets named load_query_from_json
+benchmarks/selection_benchmark.s: benchmarks/selection_benchmark.cpp.s
 
-# Build rule for target.
-load_query_from_json: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 load_query_from_json
-.PHONY : load_query_from_json
+.PHONY : benchmarks/selection_benchmark.s
 
-# fast build rule for target.
-load_query_from_json/fast:
-	$(MAKE) -f test/CMakeFiles/load_query_from_json.dir/build.make test/CMakeFiles/load_query_from_json.dir/build
-.PHONY : load_query_from_json/fast
+# target to generate assembly for a file
+benchmarks/selection_benchmark.cpp.s:
+	$(MAKE) -f CMakeFiles/selection_benchmark.dir/build.make CMakeFiles/selection_benchmark.dir/benchmarks/selection_benchmark.cpp.s
+.PHONY : benchmarks/selection_benchmark.cpp.s
 
-#=============================================================================
-# Target rules for targets named json_parser-tests
+benchmarks/sort_benchmark.o: benchmarks/sort_benchmark.cpp.o
 
-# Build rule for target.
-json_parser-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 json_parser-tests
-.PHONY : json_parser-tests
+.PHONY : benchmarks/sort_benchmark.o
 
-# fast build rule for target.
-json_parser-tests/fast:
-	$(MAKE) -f test/parser/CMakeFiles/json_parser-tests.dir/build.make test/parser/CMakeFiles/json_parser-tests.dir/build
-.PHONY : json_parser-tests/fast
+# target to build an object file
+benchmarks/sort_benchmark.cpp.o:
+	$(MAKE) -f CMakeFiles/sort_benchmark.dir/build.make CMakeFiles/sort_benchmark.dir/benchmarks/sort_benchmark.cpp.o
+.PHONY : benchmarks/sort_benchmark.cpp.o
 
-#=============================================================================
-# Target rules for targets named string_column_tests
+benchmarks/sort_benchmark.i: benchmarks/sort_benchmark.cpp.i
 
-# Build rule for target.
-string_column_tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 string_column_tests
-.PHONY : string_column_tests
+.PHONY : benchmarks/sort_benchmark.i
 
-# fast build rule for target.
-string_column_tests/fast:
-	$(MAKE) -f lib/cogadb/test/CMakeFiles/string_column_tests.dir/build.make lib/cogadb/test/CMakeFiles/string_column_tests.dir/build
-.PHONY : string_column_tests/fast
+# target to preprocess a source file
+benchmarks/sort_benchmark.cpp.i:
+	$(MAKE) -f CMakeFiles/sort_benchmark.dir/build.make CMakeFiles/sort_benchmark.dir/benchmarks/sort_benchmark.cpp.i
+.PHONY : benchmarks/sort_benchmark.cpp.i
 
-#=============================================================================
-# Target rules for targets named dictionary_compressed_column-tests
+benchmarks/sort_benchmark.s: benchmarks/sort_benchmark.cpp.s
 
-# Build rule for target.
-dictionary_compressed_column-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 dictionary_compressed_column-tests
-.PHONY : dictionary_compressed_column-tests
+.PHONY : benchmarks/sort_benchmark.s
 
-# fast build rule for target.
-dictionary_compressed_column-tests/fast:
-	$(MAKE) -f lib/cogadb/test/CMakeFiles/dictionary_compressed_column-tests.dir/build.make lib/cogadb/test/CMakeFiles/dictionary_compressed_column-tests.dir/build
-.PHONY : dictionary_compressed_column-tests/fast
-
-#=============================================================================
-# Target rules for targets named wah_bitmap_column-tests
-
-# Build rule for target.
-wah_bitmap_column-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 wah_bitmap_column-tests
-.PHONY : wah_bitmap_column-tests
-
-# fast build rule for target.
-wah_bitmap_column-tests/fast:
-	$(MAKE) -f lib/cogadb/test/CMakeFiles/wah_bitmap_column-tests.dir/build.make lib/cogadb/test/CMakeFiles/wah_bitmap_column-tests.dir/build
-.PHONY : wah_bitmap_column-tests/fast
-
-#=============================================================================
-# Target rules for targets named code-generation-tests
-
-# Build rule for target.
-code-generation-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 code-generation-tests
-.PHONY : code-generation-tests
-
-# fast build rule for target.
-code-generation-tests/fast:
-	$(MAKE) -f lib/cogadb/test/CMakeFiles/code-generation-tests.dir/build.make lib/cogadb/test/CMakeFiles/code-generation-tests.dir/build
-.PHONY : code-generation-tests/fast
-
-#=============================================================================
-# Target rules for targets named order_preserving_dictionary_compressed_column-tests
-
-# Build rule for target.
-order_preserving_dictionary_compressed_column-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 order_preserving_dictionary_compressed_column-tests
-.PHONY : order_preserving_dictionary_compressed_column-tests
-
-# fast build rule for target.
-order_preserving_dictionary_compressed_column-tests/fast:
-	$(MAKE) -f lib/cogadb/test/CMakeFiles/order_preserving_dictionary_compressed_column-tests.dir/build.make lib/cogadb/test/CMakeFiles/order_preserving_dictionary_compressed_column-tests.dir/build
-.PHONY : order_preserving_dictionary_compressed_column-tests/fast
-
-#=============================================================================
-# Target rules for targets named variant-measurement-tests
-
-# Build rule for target.
-variant-measurement-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 variant-measurement-tests
-.PHONY : variant-measurement-tests
-
-# fast build rule for target.
-variant-measurement-tests/fast:
-	$(MAKE) -f lib/cogadb/test/util/CMakeFiles/variant-measurement-tests.dir/build.make lib/cogadb/test/util/CMakeFiles/variant-measurement-tests.dir/build
-.PHONY : variant-measurement-tests/fast
-
-#=============================================================================
-# Target rules for targets named variant-configurator-tests
-
-# Build rule for target.
-variant-configurator-tests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 variant-configurator-tests
-.PHONY : variant-configurator-tests
-
-# fast build rule for target.
-variant-configurator-tests/fast:
-	$(MAKE) -f lib/cogadb/test/util/CMakeFiles/variant-configurator-tests.dir/build.make lib/cogadb/test/util/CMakeFiles/variant-configurator-tests.dir/build
-.PHONY : variant-configurator-tests/fast
+# target to generate assembly for a file
+benchmarks/sort_benchmark.cpp.s:
+	$(MAKE) -f CMakeFiles/sort_benchmark.dir/build.make CMakeFiles/sort_benchmark.dir/benchmarks/sort_benchmark.cpp.s
+.PHONY : benchmarks/sort_benchmark.cpp.s
 
 external/IntelPerformanceCounterMonitorV2.7/client_bw.o: external/IntelPerformanceCounterMonitorV2.7/client_bw.cpp.o
 
@@ -751,6 +691,33 @@ external/IntelPerformanceCounterMonitorV2.7/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/cogadb.dir/build.make CMakeFiles/cogadb.dir/external/IntelPerformanceCounterMonitorV2.7/utils.cpp.s
 .PHONY : external/IntelPerformanceCounterMonitorV2.7/utils.cpp.s
 
+external/moderngpu/src/mgpuutil.o: external/moderngpu/src/mgpuutil.cpp.o
+
+.PHONY : external/moderngpu/src/mgpuutil.o
+
+# target to build an object file
+external/moderngpu/src/mgpuutil.cpp.o:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o
+.PHONY : external/moderngpu/src/mgpuutil.cpp.o
+
+external/moderngpu/src/mgpuutil.i: external/moderngpu/src/mgpuutil.cpp.i
+
+.PHONY : external/moderngpu/src/mgpuutil.i
+
+# target to preprocess a source file
+external/moderngpu/src/mgpuutil.cpp.i:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.i
+.PHONY : external/moderngpu/src/mgpuutil.cpp.i
+
+external/moderngpu/src/mgpuutil.s: external/moderngpu/src/mgpuutil.cpp.s
+
+.PHONY : external/moderngpu/src/mgpuutil.s
+
+# target to generate assembly for a file
+external/moderngpu/src/mgpuutil.cpp.s:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.s
+.PHONY : external/moderngpu/src/mgpuutil.cpp.s
+
 lib/cogadb/src/backends/cpu/cpu_backend.o: lib/cogadb/src/backends/cpu/cpu_backend.cpp.o
 
 .PHONY : lib/cogadb/src/backends/cpu/cpu_backend.o
@@ -804,6 +771,141 @@ lib/cogadb/src/backends/cpu/cpu_join.s: lib/cogadb/src/backends/cpu/cpu_join.cpp
 lib/cogadb/src/backends/cpu/cpu_join.cpp.s:
 	$(MAKE) -f CMakeFiles/cogadb.dir/build.make CMakeFiles/cogadb.dir/lib/cogadb/src/backends/cpu/cpu_join.cpp.s
 .PHONY : lib/cogadb/src/backends/cpu/cpu_join.cpp.s
+
+lib/cogadb/src/backends/gpu/gpu_backend.o: lib/cogadb/src/backends/gpu/gpu_backend.cpp.o
+
+.PHONY : lib/cogadb/src/backends/gpu/gpu_backend.o
+
+# target to build an object file
+lib/cogadb/src/backends/gpu/gpu_backend.cpp.o:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.o
+.PHONY : lib/cogadb/src/backends/gpu/gpu_backend.cpp.o
+
+lib/cogadb/src/backends/gpu/gpu_backend.i: lib/cogadb/src/backends/gpu/gpu_backend.cpp.i
+
+.PHONY : lib/cogadb/src/backends/gpu/gpu_backend.i
+
+# target to preprocess a source file
+lib/cogadb/src/backends/gpu/gpu_backend.cpp.i:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.i
+.PHONY : lib/cogadb/src/backends/gpu/gpu_backend.cpp.i
+
+lib/cogadb/src/backends/gpu/gpu_backend.s: lib/cogadb/src/backends/gpu/gpu_backend.cpp.s
+
+.PHONY : lib/cogadb/src/backends/gpu/gpu_backend.s
+
+# target to generate assembly for a file
+lib/cogadb/src/backends/gpu/gpu_backend.cpp.s:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/gpu_backend.cpp.s
+.PHONY : lib/cogadb/src/backends/gpu/gpu_backend.cpp.s
+
+lib/cogadb/src/backends/gpu/hashtable/hash_table.o: lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o
+
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/hash_table.o
+
+# target to build an object file
+lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.o
+
+lib/cogadb/src/backends/gpu/hashtable/hash_table.i: lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.i
+
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/hash_table.i
+
+# target to preprocess a source file
+lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.i:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.i
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.i
+
+lib/cogadb/src/backends/gpu/hashtable/hash_table.s: lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.s
+
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/hash_table.s
+
+# target to generate assembly for a file
+lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.s:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.s
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/hash_table.cpp.s
+
+lib/cogadb/src/backends/gpu/hashtable/mt19937ar.o: lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o
+
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/mt19937ar.o
+
+# target to build an object file
+lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.o
+
+lib/cogadb/src/backends/gpu/hashtable/mt19937ar.i: lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.i
+
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/mt19937ar.i
+
+# target to preprocess a source file
+lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.i:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.i
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.i
+
+lib/cogadb/src/backends/gpu/hashtable/mt19937ar.s: lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.s
+
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/mt19937ar.s
+
+# target to generate assembly for a file
+lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.s:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.s
+.PHONY : lib/cogadb/src/backends/gpu/hashtable/mt19937ar.cpp.s
+
+lib/cogadb/src/backends/gpu/memory_cost_models.o: lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o
+
+.PHONY : lib/cogadb/src/backends/gpu/memory_cost_models.o
+
+# target to build an object file
+lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o
+.PHONY : lib/cogadb/src/backends/gpu/memory_cost_models.cpp.o
+
+lib/cogadb/src/backends/gpu/memory_cost_models.i: lib/cogadb/src/backends/gpu/memory_cost_models.cpp.i
+
+.PHONY : lib/cogadb/src/backends/gpu/memory_cost_models.i
+
+# target to preprocess a source file
+lib/cogadb/src/backends/gpu/memory_cost_models.cpp.i:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.i
+.PHONY : lib/cogadb/src/backends/gpu/memory_cost_models.cpp.i
+
+lib/cogadb/src/backends/gpu/memory_cost_models.s: lib/cogadb/src/backends/gpu/memory_cost_models.cpp.s
+
+.PHONY : lib/cogadb/src/backends/gpu/memory_cost_models.s
+
+# target to generate assembly for a file
+lib/cogadb/src/backends/gpu/memory_cost_models.cpp.s:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/memory_cost_models.cpp.s
+.PHONY : lib/cogadb/src/backends/gpu/memory_cost_models.cpp.s
+
+lib/cogadb/src/backends/gpu/stream_manager.o: lib/cogadb/src/backends/gpu/stream_manager.cpp.o
+
+.PHONY : lib/cogadb/src/backends/gpu/stream_manager.o
+
+# target to build an object file
+lib/cogadb/src/backends/gpu/stream_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.o
+.PHONY : lib/cogadb/src/backends/gpu/stream_manager.cpp.o
+
+lib/cogadb/src/backends/gpu/stream_manager.i: lib/cogadb/src/backends/gpu/stream_manager.cpp.i
+
+.PHONY : lib/cogadb/src/backends/gpu/stream_manager.i
+
+# target to preprocess a source file
+lib/cogadb/src/backends/gpu/stream_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.i
+.PHONY : lib/cogadb/src/backends/gpu/stream_manager.cpp.i
+
+lib/cogadb/src/backends/gpu/stream_manager.s: lib/cogadb/src/backends/gpu/stream_manager.cpp.s
+
+.PHONY : lib/cogadb/src/backends/gpu/stream_manager.s
+
+# target to generate assembly for a file
+lib/cogadb/src/backends/gpu/stream_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/lib/cogadb/src/backends/gpu/stream_manager.cpp.s
+.PHONY : lib/cogadb/src/backends/gpu/stream_manager.cpp.s
 
 lib/cogadb/src/backends/processor_backend.o: lib/cogadb/src/backends/processor_backend.cpp.o
 
@@ -6218,44 +6320,44 @@ help:
 	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... sql_test_ssb_diagrams"
-	@echo "... cogadb"
-	@echo "... sql_benchmark_parser"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... SQLParser"
-	@echo "... gtest"
-	@echo "... cogadb_tests"
 	@echo "... install"
+	@echo "... install/local"
 	@echo "... test"
 	@echo "... doc"
+	@echo "... generic_selection_benchmark"
+	@echo "... aggregation_benchmark"
+	@echo "... cogadb"
+	@echo "... sql_benchmark_parser"
+	@echo "... SQLParser"
+	@echo "... gtest"
+	@echo "... selection_benchmark"
+	@echo "... sql_test_ssb_diagrams"
+	@echo "... sort_benchmark"
+	@echo "... list_install_components"
+	@echo "... install/strip"
+	@echo "... cuda_gpu_backend"
+	@echo "... join_benchmark"
 	@echo "... hype"
 	@echo "... hype-doc"
 	@echo "... hype-doc-print"
 	@echo "... cogadbd"
 	@echo "... cogadb-doc-print"
 	@echo "... cogadb-doc"
-	@echo "... opencl_kernel_launch"
-	@echo "... json_query_compiler_interface-tests"
-	@echo "... bulk_execution_ssb-tests"
-	@echo "... query_compiler_ssb-tests"
-	@echo "... opencl_query_compiler_ssb_aggregation-tests"
-	@echo "... bulk_execution_tpch-tests"
-	@echo "... opencl_query_compiler_ssb_projection-tests"
-	@echo "... standard_query_tests"
-	@echo "... opencl_query_compiler_ssb_groupagg-tests"
-	@echo "... vector_at_a_time_test"
-	@echo "... code_generation_k_means"
-	@echo "... load_query_from_json"
-	@echo "... json_parser-tests"
-	@echo "... string_column_tests"
-	@echo "... dictionary_compressed_column-tests"
-	@echo "... wah_bitmap_column-tests"
-	@echo "... code-generation-tests"
-	@echo "... order_preserving_dictionary_compressed_column-tests"
-	@echo "... variant-measurement-tests"
-	@echo "... variant-configurator-tests"
+	@echo "... benchmarks/aggregation_benchmark.o"
+	@echo "... benchmarks/aggregation_benchmark.i"
+	@echo "... benchmarks/aggregation_benchmark.s"
+	@echo "... benchmarks/generic_selection_benchmark.o"
+	@echo "... benchmarks/generic_selection_benchmark.i"
+	@echo "... benchmarks/generic_selection_benchmark.s"
+	@echo "... benchmarks/join_benchmark.o"
+	@echo "... benchmarks/join_benchmark.i"
+	@echo "... benchmarks/join_benchmark.s"
+	@echo "... benchmarks/selection_benchmark.o"
+	@echo "... benchmarks/selection_benchmark.i"
+	@echo "... benchmarks/selection_benchmark.s"
+	@echo "... benchmarks/sort_benchmark.o"
+	@echo "... benchmarks/sort_benchmark.i"
+	@echo "... benchmarks/sort_benchmark.s"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/client_bw.o"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/client_bw.i"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/client_bw.s"
@@ -6271,12 +6373,30 @@ help:
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/utils.o"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/utils.i"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/utils.s"
+	@echo "... external/moderngpu/src/mgpuutil.o"
+	@echo "... external/moderngpu/src/mgpuutil.i"
+	@echo "... external/moderngpu/src/mgpuutil.s"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_backend.o"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_backend.i"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_backend.s"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_join.o"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_join.i"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_join.s"
+	@echo "... lib/cogadb/src/backends/gpu/gpu_backend.o"
+	@echo "... lib/cogadb/src/backends/gpu/gpu_backend.i"
+	@echo "... lib/cogadb/src/backends/gpu/gpu_backend.s"
+	@echo "... lib/cogadb/src/backends/gpu/hashtable/hash_table.o"
+	@echo "... lib/cogadb/src/backends/gpu/hashtable/hash_table.i"
+	@echo "... lib/cogadb/src/backends/gpu/hashtable/hash_table.s"
+	@echo "... lib/cogadb/src/backends/gpu/hashtable/mt19937ar.o"
+	@echo "... lib/cogadb/src/backends/gpu/hashtable/mt19937ar.i"
+	@echo "... lib/cogadb/src/backends/gpu/hashtable/mt19937ar.s"
+	@echo "... lib/cogadb/src/backends/gpu/memory_cost_models.o"
+	@echo "... lib/cogadb/src/backends/gpu/memory_cost_models.i"
+	@echo "... lib/cogadb/src/backends/gpu/memory_cost_models.s"
+	@echo "... lib/cogadb/src/backends/gpu/stream_manager.o"
+	@echo "... lib/cogadb/src/backends/gpu/stream_manager.i"
+	@echo "... lib/cogadb/src/backends/gpu/stream_manager.s"
 	@echo "... lib/cogadb/src/backends/processor_backend.o"
 	@echo "... lib/cogadb/src/backends/processor_backend.i"
 	@echo "... lib/cogadb/src/backends/processor_backend.s"

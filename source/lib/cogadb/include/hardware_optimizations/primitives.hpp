@@ -1,8 +1,8 @@
 #pragma once
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
+//#ifdef HAVE_CONFIG_H
+//#include "config.h"
+//#endif
 
 #include <boost/any.hpp>
 #include <boost/bind.hpp>

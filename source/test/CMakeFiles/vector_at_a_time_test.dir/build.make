@@ -93,6 +93,9 @@ test/vector_at_a_time_test: test/CMakeFiles/vector_at_a_time_test.dir/build.make
 test/vector_at_a_time_test: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/vector_at_a_time_test: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/vector_at_a_time_test: lib/libcogadb.so
+test/vector_at_a_time_test: lib/libcuda_gpu_backend.so
+test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/librt.so
 test/vector_at_a_time_test: lib/hype/lib/libhype.so
 test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libboost_system.so

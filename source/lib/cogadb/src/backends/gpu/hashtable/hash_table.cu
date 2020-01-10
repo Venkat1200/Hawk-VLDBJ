@@ -14,8 +14,8 @@
  * @brief Hides all of the CUDA calls from the actual CPP file.
  */
 
-#include <backends/gpu/hashtable/definitions.h>
-#include <core/global_definitions.hpp>
+#include "backends/gpu/hashtable/definitions.h"
+#include "core/global_definitions.hpp"
 #include "cuda_util.h"
 #include "debugging.h"
 #include "hash_table.cuh"
@@ -39,7 +39,7 @@ void ClearTable(const unsigned slots_in_table, const Entry fill_value,
   cudaError_t err = cudaStreamSynchronize(computeStream);
   if (err != cudaSuccess) {
     COGADB_ERROR("Could not clean up hash table!", "");
-    gpuErrchk(err);
+    //gpuErrchk(err);
     return;
   }
 }
@@ -55,7 +55,7 @@ cudaError_t CallCuckooHash(
   // Build the table.
   cudaError_t err = cudaMemset(d_failures, 0, sizeof(unsigned));
   if (err != cudaSuccess) {
-    gpuErrchk(err);
+    //gpuErrchk(err);
     return err;
   }
 
@@ -84,7 +84,7 @@ cudaError_t CallCuckooHash(
   err = cudaStreamSynchronize(computeStream);
   if (err != cudaSuccess) {
     COGADB_ERROR("Could not build hash table!", "");
-    gpuErrchk(err);
+    //gpuErrchk(err);
     return err;
   }
   return cudaSuccess;
@@ -125,7 +125,7 @@ bool CallHashRetrieve(const unsigned n_queries,
   cudaError_t err = cudaStreamSynchronize(computeStream);
   if (err != cudaSuccess) {
     COGADB_ERROR("Could not retrieve semi join result from hash table!", "");
-    gpuErrchk(err);
+    //gpuErrchk(err);
     return false;
   }
 
@@ -197,7 +197,7 @@ bool CallRetrieveHashJoin(
   }
   cudaError_t err = cudaStreamSynchronize(computeStream);
   if (err != cudaSuccess) {
-    gpuErrchk(err);
+    //gpuErrchk(err);
     COGADB_ERROR("Could not retrieve HashJoin result from hash table! "
                      << "(retrieve_hash_join<<<gridDim, kBlockSize, 0, "
                         "computeStream>>>)",
@@ -224,7 +224,7 @@ bool CallRetrieveHashJoin(
       d_temp_query, d_temp_table, d_out_query, d_out_table);
   err = cudaStreamSynchronize(computeStream);
   if (err != cudaSuccess) {
-    gpuErrchk(err);
+    //gpuErrchk(err);
     COGADB_ERROR(
         "Could not retrieve HashJoin result from hash table! "
             << "(block_compaction<<<gridDim, kBlockSize, 0, computeStream>>>)",

@@ -93,6 +93,9 @@ test/load_query_from_json: test/CMakeFiles/load_query_from_json.dir/build.make
 test/load_query_from_json: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/load_query_from_json: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/load_query_from_json: lib/libcogadb.so
+test/load_query_from_json: lib/libcuda_gpu_backend.so
+test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/load_query_from_json: /usr/lib/x86_64-linux-gnu/librt.so
 test/load_query_from_json: lib/hype/lib/libhype.so
 test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libboost_system.so

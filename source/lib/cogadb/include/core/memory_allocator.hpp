@@ -5,7 +5,7 @@
 
 #include <boost/shared_ptr.hpp>
 
-#include <hype.hpp>
+#include "hype.hpp"
 
 namespace CoGaDB {
 

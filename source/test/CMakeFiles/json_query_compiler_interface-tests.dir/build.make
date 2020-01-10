@@ -93,6 +93,9 @@ test/json_query_compiler_interface-tests: test/CMakeFiles/json_query_compiler_in
 test/json_query_compiler_interface-tests: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 test/json_query_compiler_interface-tests: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 test/json_query_compiler_interface-tests: lib/libcogadb.so
+test/json_query_compiler_interface-tests: lib/libcuda_gpu_backend.so
+test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/librt.so
 test/json_query_compiler_interface-tests: lib/hype/lib/libhype.so
 test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libboost_system.so

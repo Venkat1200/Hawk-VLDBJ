@@ -21,7 +21,7 @@
 #include <backends/gpu/hashtable/hash_table.h>
 
 #include <driver_types.h>
-#include <cub/cub.cuh>
+#include "cub/cub.cuh"
 
 
 namespace CudaHT {

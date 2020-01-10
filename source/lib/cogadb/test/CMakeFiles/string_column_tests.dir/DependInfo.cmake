@@ -20,13 +20,15 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "lib/hype/include"
   "external"
+  "lib/cogadb/include"
+  "external/cub-1.4.1"
+  "external/moderngpu/include"
   "gtest/src/gtest/googletest/include"
   "gtest/src/gtest/googlemock/include"
   "."
-  "lib/cogadb/include"
   "lib/cogadb/include/hardware_optimizations/main_memory_joins/serial_hash_join"
-  "lib/hype/include"
   "external/IntelPerformanceCounterMonitorV2.7"
   "external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver"
   "/usr/local/include/compute"
@@ -38,6 +40,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/gurumurt/Hawk-VLDBJ/source/CMakeFiles/cogadb.dir/DependInfo.cmake"
+  "/home/gurumurt/Hawk-VLDBJ/source/CMakeFiles/cuda_gpu_backend.dir/DependInfo.cmake"
   "/home/gurumurt/Hawk-VLDBJ/source/lib/hype/CMakeFiles/hype.dir/DependInfo.cmake"
   )
 

@@ -93,6 +93,9 @@ lib/cogadb/test/util/variant-configurator-tests: lib/cogadb/test/util/CMakeFiles
 lib/cogadb/test/util/variant-configurator-tests: gtest/src/gtest-build/googlemock/gtest/libgtest.a
 lib/cogadb/test/util/variant-configurator-tests: gtest/src/gtest-build/googlemock/gtest/libgtest_main.a
 lib/cogadb/test/util/variant-configurator-tests: lib/libcogadb.so
+lib/cogadb/test/util/variant-configurator-tests: lib/libcuda_gpu_backend.so
+lib/cogadb/test/util/variant-configurator-tests: /usr/lib/x86_64-linux-gnu/libcudart_static.a
+lib/cogadb/test/util/variant-configurator-tests: /usr/lib/x86_64-linux-gnu/librt.so
 lib/cogadb/test/util/variant-configurator-tests: lib/hype/lib/libhype.so
 lib/cogadb/test/util/variant-configurator-tests: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 lib/cogadb/test/util/variant-configurator-tests: /usr/lib/x86_64-linux-gnu/libboost_system.so
