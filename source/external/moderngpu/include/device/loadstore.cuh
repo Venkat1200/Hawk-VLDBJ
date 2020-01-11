@@ -67,9 +67,7 @@ MGPU_DEVICE void DeviceGlobalToRegPred(int count, InputIt data, int tid,
 	if(sync) __syncthreads();
 }
 
-template<int NT, int VT, typename InputIt, typename T>
-MGPU_DEVICE void DeviceGlobalToReg(int count, InputIt data, int tid, 
-	T* reg, bool sync) {
+template<int NT, int VT, typename InputIt, typename T> MGPU_DEVICE void DeviceGlobalToReg(int count, InputIt data, int tid, T* reg, bool sync) {
 
 	if(count >= NT * VT) {
 		#pragma unroll
@@ -79,9 +77,7 @@ MGPU_DEVICE void DeviceGlobalToReg(int count, InputIt data, int tid,
 		DeviceGlobalToRegPred<NT, VT>(count, data, tid, reg, false);
 	if(sync) __syncthreads();
 }
-template<int NT, int VT0, int VT1, typename InputIt, typename T>
-MGPU_DEVICE void DeviceGlobalToReg2(int count, InputIt data, int tid, 
-	T* reg, bool sync) {
+template<int NT, int VT0, int VT1, typename InputIt, typename T> MGPU_DEVICE void DeviceGlobalToReg(int count, InputIt data, int tid, T* reg, bool sync) {
 
 	DeviceGlobalToReg<NT, VT0>(count, data, tid, reg, false);
 	#pragma unroll

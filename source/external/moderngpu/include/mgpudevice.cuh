@@ -66,9 +66,7 @@ MGPU_DEVICE void DeviceGlobalToRegDefault(int count, InputIt data, int tid,
 //		index = NT * i + tid;
 //		if(index < count) reg[i] = data[index];
 // No synchronize after load.
-template<int NT, int VT0, int VT1, typename InputIt, typename T>
-MGPU_DEVICE void DeviceGlobalToReg(int count, InputIt data, int tid, 
-	T* reg, bool sync = false);
+template<int NT, int VT0, int VT1, typename InputIt, typename T> MGPU_DEVICE void DeviceGlobalToReg2(int count, InputIt data, int tid, T* reg, bool sync = false);
 
 // For 0 <= i < VT: 
 //		index = NT * i + tid;
@@ -288,3 +286,4 @@ MGPU_DEVICE void DeviceTransferMergeValuesShared(int count, const T* a_global,
 #include "device/launchbox.cuh"
 #include "device/loadstore.cuh"
 #include "device/ctasegscan.cuh"
+

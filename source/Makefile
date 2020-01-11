@@ -691,33 +691,6 @@ external/IntelPerformanceCounterMonitorV2.7/utils.cpp.s:
 	$(MAKE) -f CMakeFiles/cogadb.dir/build.make CMakeFiles/cogadb.dir/external/IntelPerformanceCounterMonitorV2.7/utils.cpp.s
 .PHONY : external/IntelPerformanceCounterMonitorV2.7/utils.cpp.s
 
-external/moderngpu/src/mgpuutil.o: external/moderngpu/src/mgpuutil.cpp.o
-
-.PHONY : external/moderngpu/src/mgpuutil.o
-
-# target to build an object file
-external/moderngpu/src/mgpuutil.cpp.o:
-	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.o
-.PHONY : external/moderngpu/src/mgpuutil.cpp.o
-
-external/moderngpu/src/mgpuutil.i: external/moderngpu/src/mgpuutil.cpp.i
-
-.PHONY : external/moderngpu/src/mgpuutil.i
-
-# target to preprocess a source file
-external/moderngpu/src/mgpuutil.cpp.i:
-	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.i
-.PHONY : external/moderngpu/src/mgpuutil.cpp.i
-
-external/moderngpu/src/mgpuutil.s: external/moderngpu/src/mgpuutil.cpp.s
-
-.PHONY : external/moderngpu/src/mgpuutil.s
-
-# target to generate assembly for a file
-external/moderngpu/src/mgpuutil.cpp.s:
-	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/external/moderngpu/src/mgpuutil.cpp.s
-.PHONY : external/moderngpu/src/mgpuutil.cpp.s
-
 lib/cogadb/src/backends/cpu/cpu_backend.o: lib/cogadb/src/backends/cpu/cpu_backend.cpp.o
 
 .PHONY : lib/cogadb/src/backends/cpu/cpu_backend.o
@@ -6373,9 +6346,6 @@ help:
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/utils.o"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/utils.i"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/utils.s"
-	@echo "... external/moderngpu/src/mgpuutil.o"
-	@echo "... external/moderngpu/src/mgpuutil.i"
-	@echo "... external/moderngpu/src/mgpuutil.s"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_backend.o"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_backend.i"
 	@echo "... lib/cogadb/src/backends/cpu/cpu_backend.s"

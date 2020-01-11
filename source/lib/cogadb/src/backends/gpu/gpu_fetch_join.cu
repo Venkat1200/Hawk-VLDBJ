@@ -4,11 +4,11 @@
 #include <thrust/scan.h>
 #include <backends/gpu/fetch_join.hpp>
 #include <backends/gpu/stream_manager.hpp>
-#include <backends/gpu/util.hpp>
+#include "backends/gpu/util.hpp"
 #include <compression/dictionary_compressed_column.hpp>
 #include <core/column.hpp>
 #include <lookup_table/join_index.hpp>
-#include <moderngpu.cuh>
+//#include "moderngpu.cuh"
 #include <util/time_measurement.hpp>
 
 namespace CoGaDB {
@@ -23,13 +23,13 @@ namespace gpu {
 typedef int64_t SIGNED_INTEGER;
 
 //#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
-
+//
 //        inline void gpuAssert(cudaError_t code, const char *file, int line,
 //        bool abort = true) {
 //            if (code != cudaSuccess) {
 //                fprintf(stderr, "GPUassert: %s %s %d\n",
 //                cudaGetErrorString(code), file, line);
-//                if (abort) exit(code);
+//                if (abort) CoGaDB::exit(code);
 //            }
 //        }
 

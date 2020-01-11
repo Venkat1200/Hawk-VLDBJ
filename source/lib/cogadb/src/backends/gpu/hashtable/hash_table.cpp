@@ -14,7 +14,7 @@
  * @brief Implements a basic hash table that stores one value per key.
  */
 
-#include <backends/gpu/hashtable/hash_table.h>
+#include "backends/gpu/hashtable/hash_table.h"
 #include <cuda_runtime_api.h>
 #include <algorithm>
 #include <cmath>

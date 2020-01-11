@@ -32,6 +32,10 @@ macro (get_source_cuda SOURCE_FILES)
     set(${SOURCE_FILES} ${SOURCE_FILES_LOCAL})
 endmacro()
 
+# enable c++11
+#set(CMAKE_CXX_STANDARD 11)
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ")
+
 project(CoGaDB)
 set(COGADB_TARGET "cogadb")
 cmake_minimum_required(VERSION 2.6)
@@ -120,16 +124,18 @@ set(LIBS ${LIBS} ${OPENCL_LIBRARIES})
 add_definitions(-DCL_USE_DEPRECATED_OPENCL_1_2_APIS -DCL_USE_DEPRECATED_OPENCL_1_1_APIS)
 
 # Configure CUDA
-option(ENABLE_GPU_ACCELERATION "GPU acceleration enabled" OFF)
+option(ENABLE_GPU_ACCELERATION "GPU acceleration enabled" ON)
 include_directories(${CMAKE_SOURCE_DIR}/lib/cogadb/include)
 include_directories(${PROJECT_SOURCE_DIR}/external/cub-1.4.1)
+#include_directories(${PROJECT_SOURCE_DIR}/external/moderngpu/include)
 include_directories(${PROJECT_SOURCE_DIR}/external/moderngpu/include)
 if(ENABLE_GPU_ACCELERATION)
     message(INFO " Enabling GPU Acceleration.")
-    set(CUDA_GENERATED_OUTPUT_DIR "${PROJECT_BINARY_DIR}/CMakeFiles")
-    set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -arch=sm_30 -std=c++11"
-        CACHE STRING "CUDA nvcc flags (semicolon separated)")
     find_package(CUDA REQUIRED)
+set(CUDA_GENERATED_OUTPUT_DIR "${PROJECT_BINARY_DIR}/CMakeFiles")	
+    set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS} -arch=sm_20"
+        CACHE STRING "CUDA nvcc flags (semicolon separated)")
+    
 endif ()
 
 # Check for cudaMemGetInfo() availability
@@ -142,7 +148,7 @@ check_symbol_exists(cudaMemGetInfo "cuda.h;cuda_runtime_api.h"
 
 # Configure Flex and Bison
 find_package(FLEX REQUIRED)
-find_package(BISON 2.5 REQUIRED)
+find_package(BISON REQUIRED)
 execute_process(COMMAND ${BISON_EXECUTABLE} --print-datadir
 		OUTPUT_VARIABLE BISON_DATA_DIR
 		OUTPUT_STRIP_TRAILING_WHITESPACE)
@@ -157,13 +163,13 @@ else(BISON_VERSION VERSION_LESS 3.0.2)
 endif()
 
 # Configure BAM - for genomics support
-find_package(BAM)
-if (BAM_FOUND)
-  set(LIBS ${LIBS} ${BAM_LIBRARIES})
-  message(INFO " Enabling genomics importer for FASTA, SAM and BAM files.")
-else (!BAM_FOUND)
-  message(WARNING " Disabling genomics importer for FASTA, SAM and BAM files. Reason: " ${BAM_ERROR_REASON})
-endif()
+#find_package(BAM)
+#if (BAM_FOUND)
+#  set(LIBS ${LIBS} ${BAM_LIBRARIES})
+#  message(INFO " Enabling genomics importer for FASTA, SAM and BAM files.")
+#else (!BAM_FOUND)
+#  message(WARNING " Disabling genomics importer for FASTA, SAM and BAM files. Reason: " ${BAM_ERROR_REASON})
+#endif()
 
 
 # Configure Perseus - for Perseus integration
@@ -180,7 +186,7 @@ endif(ENABLE_PERSEUS)
 find_package(OpenMP REQUIRED)
 if (OPENMP_FOUND)
     set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${OpenMP_C_FLAGS}")
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS}")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OpenMP_CXX_FLAGS} -std=c++11 -D_MWAITXINTRIN_H_INCLUDED")
 endif()
 
 if(USE_GOOGLE_PERF_TOOLS)
@@ -206,7 +212,7 @@ else ()
 endif ()
 
 # Configure LLVM and clang
-find_package(LLVM 3.6 REQUIRED)
+find_package(LLVM REQUIRED)
 find_package(clang REQUIRED)
 set(COGADB_INCLUDE_DIRS ${COGADB_INCLUDE_DIRS} ${CLANG_INCLUDE_DIRS})
 set(LIBS ${LIBS} ${CLANG_LIBS} ${LLVM_MODULE_LIBS})
@@ -295,9 +301,11 @@ set(CMAKE_C_FLAGS "-std=gnu99")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse4.1")
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -fno-omit-frame-pointer -falign-functions=4 -falign-loops=4 -falign-jumps=4 -ftree-vectorize -fexpensive-optimizations -frerun-cse-after-loop  -funroll-loops -frerun-loop-opt -finline-functions")
 
-set(CUDA_NVCC_FLAGS "-rdc=true -gencode arch=compute_35,code=sm_35 -gencode arch=compute_30,code=sm_30 -gencode arch=compute_20,code=sm_20,std=c++11" CACHE STRING "Configures for which GPU Compute Capabilities CoGaDB is compiled.")
-
+set (CUDA_PROPAGATE_HOST_FLAGS ON)
+set(CUDA_NVCC_FLAGS " -rdc=true -gencode arch=compute_20,code=sm_20") #CACHE STRING "Configures for which GPU Compute Capabilities CoGaDB is  --> -gencode arch=compute_21,code=sm_20 -gencode arch=compute_20,code=sm_20 compiled.")
+#list(APPEND CUDA_NVCC_FLAGS "-std=c++11")
 # set clang binary for query compilation
+
 execute_process(COMMAND ${LLVM_CONFIG_EXECUTABLE} --prefix OUTPUT_VARIABLE LLVM_INSTALL_PREFIX OUTPUT_STRIP_TRAILING_WHITESPACE)
 set(QUERY_COMPILATION_CC "\"${LLVM_INSTALL_PREFIX}/bin/clang\"")
 set(QUERY_COMPILATION_CXX "\"${LLVM_INSTALL_PREFIX}/bin/clang++\"")
@@ -348,8 +356,10 @@ install(DIRECTORY "${PROJECT_SOURCE_DIR}/include/"
         PATTERN ".svn" EXCLUDE)
 
 if(ENABLE_GPU_ACCELERATION)
-    add_source_cuda(${PROJECT_SOURCE_DIR}/external/moderngpu/src/mgpucontext.cu
-                    ${PROJECT_SOURCE_DIR}/external/moderngpu/src/mgpuutil.cpp)
+#    add_source_cuda(${PROJECT_SOURCE_DIR}/external/moderngpu/include/moderngpu.cuh
+#		    ${PROJECT_SOURCE_DIR}/external/moderngpu/include/mgpudevice.cuh
+#		    ${PROJECT_SOURCE_DIR}/external/moderngpu/src/mgpucontext.cu
+#                   ${PROJECT_SOURCE_DIR}/external/moderngpu/src/mgpuutil.cpp)
 
     get_source_cuda(CUDA_SOURCE)
 
@@ -359,6 +369,7 @@ if(ENABLE_GPU_ACCELERATION)
     set(LIBS ${LIBS} cuda_gpu_backend)
     # static, shared and import libraries are put in lib/,
     # while DLLs are put in bin/
+   
     set_target_properties(cuda_gpu_backend PROPERTIES
                           ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib"
                           LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib"
@@ -372,11 +383,9 @@ get_source_cogadb(COGADB_SOURCE_FILES)
 file(GLOB_RECURSE COGADB_HEADER_FILES "lib/cogadb/include/*.h"
     "lib/cogadb/include/*.hpp")
 
-# enable c++11
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 ")
-
 if(ENABLE_GPU_ACCELERATION)
     cuda_add_library(cogadb ${COGADB_SOURCE_FILES} ${COGADB_HEADER_FILES})
+    include_directories(${PROJECT_SOURCE_DIR}/lib/cogadb/include)
 else()
     add_library(cogadb ${COGADB_SOURCE_FILES} ${COGADB_HEADER_FILES})
 endif()

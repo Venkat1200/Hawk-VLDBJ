@@ -1771,8 +1771,6 @@ lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libtbb.so
 lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-lib/hype/lib/libhype.so: /usr/lib/libbam.a
-lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libz.so
 lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libreadline.so
 lib/hype/lib/libhype.so: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 lib/hype/lib/libhype.so: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a
@@ -1810,8 +1808,6 @@ lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libboost_log_setup.so
 lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libtbb.so
 lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-lib/hype/lib/libhype.so: /usr/lib/libbam.a
-lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libz.so
 lib/hype/lib/libhype.so: /usr/lib/x86_64-linux-gnu/libreadline.so
 lib/hype/lib/libhype.so: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 lib/hype/lib/libhype.so: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

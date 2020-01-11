@@ -112,8 +112,6 @@ bin/cogadbd: /usr/lib/x86_64-linux-gnu/libpthread.so
 bin/cogadbd: /usr/lib/x86_64-linux-gnu/libtbb.so
 bin/cogadbd: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 bin/cogadbd: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-bin/cogadbd: /usr/lib/libbam.a
-bin/cogadbd: /usr/lib/x86_64-linux-gnu/libz.so
 bin/cogadbd: /usr/lib/x86_64-linux-gnu/libreadline.so
 bin/cogadbd: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 bin/cogadbd: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

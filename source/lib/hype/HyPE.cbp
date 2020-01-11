@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="HyPE"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\CMake\FindTBB\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\BoostCompute\;CMake Files\gtest\;CMake Files\gtest\tmp\;CMake Files\external\;CMake Files\external\IntelPerformanceCounterMonitorV2.7\;CMake Files\lib\;CMake Files\lib\cogadb\;CMake Files\lib\cogadb\src\;CMake Files\lib\cogadb\src\backends\;CMake Files\lib\cogadb\src\backends\cpu\;CMake Files\lib\cogadb\src\backends\gpu\;CMake Files\lib\cogadb\src\backends\gpu\hashtable\;CMake Files\lib\cogadb\src\compression\;CMake Files\lib\cogadb\src\core\;CMake Files\lib\cogadb\src\hardware_optimizations\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\datagen\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\hashtable\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\join\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\time\;CMake Files\lib\cogadb\src\lookup_table\;CMake Files\lib\cogadb\src\optimizer\;CMake Files\lib\cogadb\src\parser\;CMake Files\lib\cogadb\src\persistence\;CMake Files\lib\cogadb\src\query_compilation\;CMake Files\lib\cogadb\src\query_compilation\code_generators\;CMake Files\lib\cogadb\src\query_compilation\primitives\;CMake Files\lib\cogadb\src\query_compilation\execution_strategy\;CMake Files\lib\cogadb\src\query_processing\;CMake Files\lib\cogadb\src\query_processing\column_processing\;CMake Files\lib\cogadb\src\query_processing\extension\;CMake Files\lib\cogadb\src\sql\;CMake Files\lib\cogadb\src\sql\server\;CMake Files\lib\cogadb\src\statistics\;CMake Files\lib\cogadb\src\unittests\;CMake Files\lib\cogadb\src\util\;CMake Files\lib\cogadb\src\util\genomics_extension\;CMake Files\lib\cogadb\src\util\opencl\;CMake Files\lib\hype\;CMake Files\lib\hype\alglib\;CMake Files\lib\hype\doc\;CMake Files\lib\hype\doc\img\;CMake Files\lib\hype\doc\additional_documentation\;CMake Files\tools\;CMake Files\tools\cogadbd\;CMake Files\doc\;CMake Files\doc\img\;CMake Files\doc\additional_documentation\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/gurumurt/Hawk-VLDBJ/source/lib/hype"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hype">
+				<Option output="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/lib/libhype.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gurumurt/Hawk-VLDBJ/source/lib/hype"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DBOOST_COMPUTE_THREAD_SAFE"/>
+					<Add option="-DBOOST_COMPUTE_HAVE_THREAD_LOCAL"/>
+					<Add option="-DCL_USE_DEPRECATED_OPENCL_1_2_APIS"/>
+					<Add option="-DCL_USE_DEPRECATED_OPENCL_1_1_APIS"/>
+					<Add option="-DLLVM_VERSION=36"/>
+					<Add option="-DHAVE_CONFIG_H"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/cub-1.4.1"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/moderngpu/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googletest/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googlemock/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/../cogadb/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 hype"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hype/fast">
+				<Option output="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/lib/libhype.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gurumurt/Hawk-VLDBJ/source/lib/hype"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DBOOST_COMPUTE_THREAD_SAFE"/>
+					<Add option="-DBOOST_COMPUTE_HAVE_THREAD_LOCAL"/>
+					<Add option="-DCL_USE_DEPRECATED_OPENCL_1_2_APIS"/>
+					<Add option="-DCL_USE_DEPRECATED_OPENCL_1_1_APIS"/>
+					<Add option="-DLLVM_VERSION=36"/>
+					<Add option="-DHAVE_CONFIG_H"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/cub-1.4.1"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/moderngpu/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googletest/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googlemock/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/../cogadb/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 hype/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hype-doc-print">
+				<Option working_dir="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Makefile&quot;  VERBOSE=1 hype-doc-print"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hype-doc">
+				<Option working_dir="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Makefile&quot;  VERBOSE=1 hype-doc"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/client_bw.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/client_bw.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/cpucounters.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/cpucounters.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/msr.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/msr.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/pci.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/pci.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/alglibinternal.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/alglibinternal.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/alglibmisc.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/alglibmisc.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/ap.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/ap.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/dataanalysis.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/dataanalysis.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/diffequations.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/diffequations.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/fasttransforms.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/fasttransforms.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/integration.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/integration.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/interpolation.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/interpolation.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/linalg.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/linalg.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/optimization.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/optimization.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/solvers.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/solvers.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/specialfunctions.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/specialfunctions.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/statistics.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src/statistics.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/config/configuration.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/config/exports.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/config/global_definitions.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/algorithm.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/algorithm_measurement.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/algorithm_statistics.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/device_memory.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/factory.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/loadchange_estimator.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/measurementpair.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/measurementpair_ringbuffer.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/offline_algorithm.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/operation.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/optimization_criterion.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/plotscriptgenerator.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/recomputation_heuristic.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/report.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/scheduler.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/scheduling_decision.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/specification.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/statistical_method.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/statistics.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/statistics_gatherer.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/time_measurement.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/core/workload_generator.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/drivers/monetdb_ocelot.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/hype.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/hype.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/optimization_criterias/probability_based_outsourcing.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/optimization_criterias/response_time.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/optimization_criterias/response_time_advanced.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/optimization_criterias/simple_round_robin_throughput.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/optimization_criterias/throughput.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/optimization_criterias/throughput2.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/pluginloader.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/recomputation_heuristics/event_based_recomputation.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/recomputation_heuristics/oneshot_computation.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/recomputation_heuristics/periodic_recomputation.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/recomputation_heuristics/static_computation.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/statistical_methods/knn_regression.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/statistical_methods/least_squares.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/plugins/statistical_methods/multi_dim_least_squares.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_optimization/qep.h">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_optimization/qep.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/benchmark.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/binary_operator.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/device_operator_queue.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/generic_operator_benchmark.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/logical_query_plan.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/n_ary_operator.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/node.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/operator.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/physical_query_plan.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/processing_device.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/typed_operator.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/unary_operator.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/query_processing/virtual_processing_device.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/util/algorithm_name_conversion.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/util/architecture.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/util/begin_ptr.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/util/get_name.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/util/print.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include/util/utility_functions.hpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/algorithm.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/algorithm_measurement.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/algorithm_name_conversion.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/algorithm_statistics.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/architecture.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/c_interface.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/device_memory.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/device_operator_queue.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/drivers/monetdb_ocelot/monetdb_ocelot.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/event_based_recomputation.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/get_name.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/hype.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/knn_regression.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/least_squares.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/loadchange_estimator.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/measurementpair.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/measurementpair_ringbuffer.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/multi_dim_least_squares.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/node.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/offline_algorithm.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/oneshot_computation.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/operation.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/operator.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/optimization_criterion.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/periodic_recomputation.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/plotscriptgenerator.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/pluginloader.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/print.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/probability_based_outsourcing.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/processing_device.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/query_optimization/c_qep.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/query_optimization/qep.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/recomputation_heuristic.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/report.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/response_time.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/response_time_advanced.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/runtime_configuration.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/scheduler.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/scheduling_decision.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/simple_round_robin_throughput.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/specification.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/statistical_method.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/statistics_gatherer.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/throughput.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/throughput2.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/time_measurement.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/utility_functions.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/src/virtual_processing_device.cpp">
+			<Option target="hype"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/config.h.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/CheckIncludeFileCXX.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindBAM.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindCPUISAXs.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindLLVM.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindLibReadline.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindOpenCL.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindRapidJSON.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindThrust.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/Findclang.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/Findsparsehash.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindTBB/FindTBB.cmake">
+			<Option virtualFolder="CMake Files\CMake\FindTBB\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/../../../../usr/local/lib/cmake/BoostCompute/BoostComputeConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\BoostCompute\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/gtest/tmp/gtest-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\gtest\tmp\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\IntelPerformanceCounterMonitorV2.7\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/backends/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\backends\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/backends/cpu/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\backends\cpu\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\backends\gpu\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/hashtable/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\backends\gpu\hashtable\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/compression/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\compression\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\core\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/datagen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\datagen\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/hashtable/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\hashtable\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/join/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\join\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/time/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\time\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/lookup_table/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\lookup_table\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/optimizer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\optimizer\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/parser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\parser\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/persistence/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\persistence\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_compilation\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/code_generators/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_compilation\code_generators\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/primitives/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_compilation\primitives\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/execution_strategy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_compilation\execution_strategy\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_processing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_processing\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_processing/column_processing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_processing\column_processing\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_processing/extension/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_processing\extension\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/sql/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\sql\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/sql/server/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\sql\server\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/statistics/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\statistics\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/unittests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\unittests\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\util\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/util/genomics_extension/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\util\genomics_extension\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/util/opencl/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\util\opencl\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\hype\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/config.h.in">
+			<Option virtualFolder="CMake Files\lib\hype\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\hype\alglib\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\hype\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Doxyfile.in">
+			<Option virtualFolder="CMake Files\lib\hype\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Doxyfile.print.in">
+			<Option virtualFolder="CMake Files\lib\hype\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/img/hype_logo_300width.png">
+			<Option virtualFolder="CMake Files\lib\hype\doc\img\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/additional_documentation/literature.bib">
+			<Option virtualFolder="CMake Files\lib\hype\doc\additional_documentation\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\cogadbd\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/Doxyfile.in">
+			<Option virtualFolder="CMake Files\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/Doxyfile.print.in">
+			<Option virtualFolder="CMake Files\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/img/cogadb_architecture.pdf">
+			<Option virtualFolder="CMake Files\doc\img\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/img/cogadb_logo_new.pdf">
+			<Option virtualFolder="CMake Files\doc\img\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/additional_documentation/literature.bib">
+			<Option virtualFolder="CMake Files\doc\additional_documentation\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

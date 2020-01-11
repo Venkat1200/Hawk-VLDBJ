@@ -6,16 +6,16 @@
 
 namespace CoGaDB {
 
-//#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
-//
-//        inline void gpuAssert(cudaError_t code, char *file, int line, bool
-//        abort = true) {
-//            if (code != cudaSuccess) {
-//                fprintf(stderr, "GPUassert: %s %s %d\n",
-//                cudaGetErrorString(code), file, line);
-//                if (abort) exit(code);
-//            }
-//        }
+#define gpuErrchk(ans) { gpuAssert((ans), __FILE__, __LINE__); }
+
+        inline void gpuAssert(cudaError_t code, char *file, int line, bool
+        abort = true) {
+            if (code != cudaSuccess) {
+                fprintf(stderr, "GPUassert: %s %s %d\n",
+                cudaGetErrorString(code), file, line);
+                if (abort) CoGaDB::exit(code);
+            }
+        }
 
 template <typename T>
 __global__ void bit_shift_left_kernel(T* array, size_t array_size,

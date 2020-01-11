@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CoGaDBD"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\CMake\;CMake Files\CMake\FindTBB\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\BoostCompute\;CMake Files\gtest\;CMake Files\gtest\tmp\;CMake Files\external\;CMake Files\external\IntelPerformanceCounterMonitorV2.7\;CMake Files\lib\;CMake Files\lib\cogadb\;CMake Files\lib\cogadb\src\;CMake Files\lib\cogadb\src\backends\;CMake Files\lib\cogadb\src\backends\cpu\;CMake Files\lib\cogadb\src\backends\gpu\;CMake Files\lib\cogadb\src\backends\gpu\hashtable\;CMake Files\lib\cogadb\src\compression\;CMake Files\lib\cogadb\src\core\;CMake Files\lib\cogadb\src\hardware_optimizations\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\datagen\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\hashtable\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\join\;CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\time\;CMake Files\lib\cogadb\src\lookup_table\;CMake Files\lib\cogadb\src\optimizer\;CMake Files\lib\cogadb\src\parser\;CMake Files\lib\cogadb\src\persistence\;CMake Files\lib\cogadb\src\query_compilation\;CMake Files\lib\cogadb\src\query_compilation\code_generators\;CMake Files\lib\cogadb\src\query_compilation\primitives\;CMake Files\lib\cogadb\src\query_compilation\execution_strategy\;CMake Files\lib\cogadb\src\query_processing\;CMake Files\lib\cogadb\src\query_processing\column_processing\;CMake Files\lib\cogadb\src\query_processing\extension\;CMake Files\lib\cogadb\src\sql\;CMake Files\lib\cogadb\src\sql\server\;CMake Files\lib\cogadb\src\statistics\;CMake Files\lib\cogadb\src\unittests\;CMake Files\lib\cogadb\src\util\;CMake Files\lib\cogadb\src\util\genomics_extension\;CMake Files\lib\cogadb\src\util\opencl\;CMake Files\lib\hype\;CMake Files\lib\hype\alglib\;CMake Files\lib\hype\doc\;CMake Files\lib\hype\doc\img\;CMake Files\lib\hype\doc\additional_documentation\;CMake Files\tools\;CMake Files\tools\cogadbd\;CMake Files\doc\;CMake Files\doc\img\;CMake Files\doc\additional_documentation\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cogadbd">
+				<Option output="/home/gurumurt/Hawk-VLDBJ/source/bin/cogadbd" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DBOOST_COMPUTE_THREAD_SAFE"/>
+					<Add option="-DBOOST_COMPUTE_HAVE_THREAD_LOCAL"/>
+					<Add option="-DCL_USE_DEPRECATED_OPENCL_1_2_APIS"/>
+					<Add option="-DCL_USE_DEPRECATED_OPENCL_1_1_APIS"/>
+					<Add option="-DLLVM_VERSION=36"/>
+					<Add option="-DHAVE_CONFIG_H"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/cub-1.4.1"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/moderngpu/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googletest/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googlemock/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/include/hardware_optimizations/main_memory_joins/serial_hash_join"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver"/>
+					<Add directory="/usr/local/include/compute"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/usr/lib/llvm-3.6/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/src/sql/server"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 cogadbd"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cogadbd/fast">
+				<Option output="/home/gurumurt/Hawk-VLDBJ/source/bin/cogadbd" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DBOOST_COMPUTE_THREAD_SAFE"/>
+					<Add option="-DBOOST_COMPUTE_HAVE_THREAD_LOCAL"/>
+					<Add option="-DCL_USE_DEPRECATED_OPENCL_1_2_APIS"/>
+					<Add option="-DCL_USE_DEPRECATED_OPENCL_1_1_APIS"/>
+					<Add option="-DLLVM_VERSION=36"/>
+					<Add option="-DHAVE_CONFIG_H"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/cub-1.4.1"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/moderngpu/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googletest/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googlemock/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/include/hardware_optimizations/main_memory_joins/serial_hash_join"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver"/>
+					<Add directory="/usr/local/include/compute"/>
+					<Add directory="/usr/local/cuda/include"/>
+					<Add directory="/usr/lib/llvm-3.6/include"/>
+					<Add directory="/home/gurumurt/Hawk-VLDBJ/source/src/sql/server"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 cogadbd/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/main.cpp">
+			<Option target="cogadbd"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/config.h.in">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/CheckIncludeFileCXX.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindBAM.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindCPUISAXs.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindLLVM.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindLibReadline.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindOpenCL.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindRapidJSON.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindThrust.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/Findclang.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/Findsparsehash.cmake">
+			<Option virtualFolder="CMake Files\CMake\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/CMake/FindTBB/FindTBB.cmake">
+			<Option virtualFolder="CMake Files\CMake\FindTBB\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/../../../../usr/local/lib/cmake/BoostCompute/BoostComputeConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\BoostCompute\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/gtest/tmp/gtest-cfgcmd.txt.in">
+			<Option virtualFolder="CMake Files\gtest\tmp\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/external/IntelPerformanceCounterMonitorV2.7/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\external\IntelPerformanceCounterMonitorV2.7\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/backends/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\backends\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/backends/cpu/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\backends\cpu\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\backends\gpu\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/backends/gpu/hashtable/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\backends\gpu\hashtable\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/compression/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\compression\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/core/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\core\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/datagen/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\datagen\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/hashtable/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\hashtable\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/join/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\join\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/hardware_optimizations/main_memory_joins/serial_hash_join/time/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\hardware_optimizations\main_memory_joins\serial_hash_join\time\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/lookup_table/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\lookup_table\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/optimizer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\optimizer\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/parser/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\parser\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/persistence/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\persistence\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_compilation\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/code_generators/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_compilation\code_generators\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/primitives/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_compilation\primitives\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/execution_strategy/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_compilation\execution_strategy\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_processing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_processing\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_processing/column_processing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_processing\column_processing\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_processing/extension/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\query_processing\extension\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/sql/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\sql\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/sql/server/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\sql\server\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/statistics/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\statistics\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/unittests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\unittests\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/util/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\util\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/util/genomics_extension/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\util\genomics_extension\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/util/opencl/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\cogadb\src\util\opencl\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\hype\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/config.h.in">
+			<Option virtualFolder="CMake Files\lib\hype\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\hype\alglib\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\lib\hype\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Doxyfile.in">
+			<Option virtualFolder="CMake Files\lib\hype\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/Doxyfile.print.in">
+			<Option virtualFolder="CMake Files\lib\hype\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/img/hype_logo_300width.png">
+			<Option virtualFolder="CMake Files\lib\hype\doc\img\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/lib/hype/doc/additional_documentation/literature.bib">
+			<Option virtualFolder="CMake Files\lib\hype\doc\additional_documentation\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/tools/cogadbd/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\tools\cogadbd\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/Doxyfile.in">
+			<Option virtualFolder="CMake Files\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/Doxyfile.print.in">
+			<Option virtualFolder="CMake Files\doc\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/img/cogadb_architecture.pdf">
+			<Option virtualFolder="CMake Files\doc\img\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/img/cogadb_logo_new.pdf">
+			<Option virtualFolder="CMake Files\doc\img\"/>
+		</Unit>
+		<Unit filename="/home/gurumurt/Hawk-VLDBJ/source/doc/additional_documentation/literature.bib">
+			<Option virtualFolder="CMake Files\doc\additional_documentation\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

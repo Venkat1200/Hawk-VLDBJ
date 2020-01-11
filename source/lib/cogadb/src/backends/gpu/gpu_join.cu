@@ -14,17 +14,17 @@
 #include <thrust/scan.h>
 #include <thrust/sort.h>
 
-#include <backends/gpu/hashtable/hash_table.h>
-#include <backends/gpu/join.hpp>
-#include <backends/gpu/stream_manager.hpp>
-#include <backends/gpu/util.hpp>
-#include <core/base_column.hpp>
-#include <core/column.hpp>
-#include <core/global_definitions.hpp>
+#include "backends/gpu/hashtable/hash_table.h"
+#include "backends/gpu/join.hpp"
+#include "backends/gpu/stream_manager.hpp"
+#include "backends/gpu/util.hpp"
+#include "core/base_column.hpp"
+#include "core/column.hpp"
+#include "core/global_definitions.hpp"
 #include <ctime>
-#include <moderngpu.cuh>
-#include <util/getname.hpp>
-#include <util/utility_functions.hpp>
+//#include <moderngpu.cuh>
+#include "util/getname.hpp"
+#include "util/utility_functions.hpp"
 
 #define SIZE_1MB (1000 * 1000)
 
@@ -223,7 +223,7 @@ const PositionListPairPtr GPU_Join<T>::binary_search_join(
             << "\tSize Left Table: " << left_num_elements << "rows" << std::endl
             << "\tSize Right Table: " << right_num_elements << "rows\n",
         "");
-    gpuErrchk(err);
+//    gpuErrchk(err);
     return PositionListPairPtr();
   }
 

@@ -1,7 +1,7 @@
 
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
+//#ifdef HAVE_CONFIG_H
+//#include "config.h"
+//#endif
 
 #include <backends/gpu/memory_cost_models.hpp>
 #include <persistence/storage_manager.hpp>

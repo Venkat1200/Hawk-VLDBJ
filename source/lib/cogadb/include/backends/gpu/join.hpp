@@ -10,7 +10,7 @@
 #ifndef GPU_JOIN_HPP
 #define GPU_JOIN_HPP
 
-//#include "core/base_table.hpp"
+#include "core/base_table.hpp"
 
 namespace CoGaDB {
 

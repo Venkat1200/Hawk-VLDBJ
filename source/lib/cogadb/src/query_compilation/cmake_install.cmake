@@ -37,7 +37,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/code_generators/cmake_install.cmake")
   include("/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/primitives/cmake_install.cmake")
   include("/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/execution_strategy/cmake_install.cmake")
-  include("/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/src/query_compilation/gpu_handbuilt/cmake_install.cmake")
 
 endif()
 

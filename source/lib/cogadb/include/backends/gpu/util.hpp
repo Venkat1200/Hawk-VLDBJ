@@ -10,7 +10,7 @@
 #ifndef UTIL_HPP
 #define UTIL_HPP
 
-#include <core/global_definitions.hpp>
+#include "core/global_definitions.hpp"
 
 #ifdef __NVCC__
 #define COGADB_HOST_DEVICE_DECLARATION __host__ __device__
@@ -18,12 +18,12 @@
 #define COGADB_HOST_DEVICE_DECLARATION
 #endif
 
-#ifdef ENABLE_GPU_ACCELERATION
-#define gpuErrchk(ans) \
-  { gpuAssert((ans), __FILE__, __LINE__); }
+//#ifdef ENABLE_GPU_ACCELERATION
+//#define gpuErrchk(ans) \
+//  { gpuAssert((ans), __FILE__, __LINE__); }
 
-#define gpuAssertCheck(ans) \
-  { (gpuAssertionCheck((ans), __FILE__, __LINE__)); }
+//#define gpuAssertCheck(ans) \
+//  { (gpuAssertionCheck((ans), __FILE__, __LINE__)); }
 
 #include <cuda_runtime.h>
 #include <thrust/device_ptr.h>
@@ -94,7 +94,7 @@ namespace CoGaDB {
 
 }  // end namespace CoGaDB
 
-#endif
+//#endif
 
 // device procedures for different binary searches
 

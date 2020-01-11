@@ -13,7 +13,7 @@
  */
 #define HAVE_CUDAMEMGETINFO
 #define LIBREADLINE_FOUND
-#define BAM_FOUND
+/* #undef BAM_FOUND */
 /* #undef PERSEUS_FOUND */
 
 /*
