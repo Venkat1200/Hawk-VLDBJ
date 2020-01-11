@@ -114,8 +114,6 @@ test/code_generation_k_means: /usr/lib/x86_64-linux-gnu/libpthread.so
 test/code_generation_k_means: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/code_generation_k_means: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/code_generation_k_means: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/code_generation_k_means: /usr/lib/libbam.a
-test/code_generation_k_means: /usr/lib/x86_64-linux-gnu/libz.so
 test/code_generation_k_means: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/code_generation_k_means: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/code_generation_k_means: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

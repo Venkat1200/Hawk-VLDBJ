@@ -114,8 +114,6 @@ test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libpthread.so
 test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/opencl_kernel_launch: /usr/lib/libbam.a
-test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libz.so
 test/opencl_kernel_launch: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/opencl_kernel_launch: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/opencl_kernel_launch: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

@@ -39,7 +39,6 @@ tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o
  /usr/local/include/compute/boost/compute/types/fundamental.hpp
  /usr/local/include/compute/boost/compute/utility/extents.hpp
  /usr/local/include/compute/boost/compute/utility/wait_list.hpp
- config.h
  external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver/DriverInterface.h
  external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver/MSRAccessor.h
  external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver/PCIDriverInterface.h

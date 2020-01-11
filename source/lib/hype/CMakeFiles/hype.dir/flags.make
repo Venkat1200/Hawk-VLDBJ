@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS =  -fopenmp -std=c++11 -D_MWAITXINTRIN_H_INCLUDED -I/usr/lib/llvm-3.6/include  -DNDEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -msse4.1 -std=c++11 -fPIC  
 
-CXX_DEFINES = -DBOOST_COMPUTE_HAVE_THREAD_LOCAL -DBOOST_COMPUTE_THREAD_SAFE -DCL_USE_DEPRECATED_OPENCL_1_1_APIS -DCL_USE_DEPRECATED_OPENCL_1_2_APIS -DHAVE_CONFIG_H -DHYPE_MAKE_SHARED -DLLVM_VERSION=36
+CXX_DEFINES = -DBOOST_COMPUTE_HAVE_THREAD_LOCAL -DBOOST_COMPUTE_THREAD_SAFE -DCL_USE_DEPRECATED_OPENCL_1_1_APIS -DCL_USE_DEPRECATED_OPENCL_1_2_APIS -DCOGADB_VERSION=\"0.4.2\" -DHAVE_CONFIG_H -DHYPE_MAKE_SHARED -DLLVM_VERSION=36 -DPATH_TO_COGADB_EXECUTABLE=\"/home/gurumurt/Hawk-VLDBJ/source\" -DPATH_TO_COGADB_SOURCE_CODE=\"/home/gurumurt/Hawk-VLDBJ/source\" -DQUERY_COMPILATION_CC=\"/usr/lib/llvm-3.6/bin/clang\" -DQUERY_COMPILATION_CLANG_VERSION=\"3.6.2\" -DQUERY_COMPILATION_CXX=\"/usr/lib/llvm-3.6/bin/clang++\"
 
 CXX_INCLUDES = -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/include -I/home/gurumurt/Hawk-VLDBJ/source/external -I/home/gurumurt/Hawk-VLDBJ/source/lib/cogadb/include -I/home/gurumurt/Hawk-VLDBJ/source/external/cub-1.4.1 -I/home/gurumurt/Hawk-VLDBJ/source/external/moderngpu/include -I/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googletest/include -I/home/gurumurt/Hawk-VLDBJ/source/gtest/src/gtest/googlemock/include -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/alglib/cpp/src -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype/../cogadb/include -I/home/gurumurt/Hawk-VLDBJ/source/lib/hype 
 

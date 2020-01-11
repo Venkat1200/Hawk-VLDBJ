@@ -14,8 +14,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "BOOST_COMPUTE_THREAD_SAFE"
   "CL_USE_DEPRECATED_OPENCL_1_1_APIS"
   "CL_USE_DEPRECATED_OPENCL_1_2_APIS"
+  "COGADB_VERSION=\"0.4.2\""
   "HAVE_CONFIG_H"
   "LLVM_VERSION=36"
+  "PATH_TO_COGADB_EXECUTABLE=\"/home/gurumurt/Hawk-VLDBJ/source\""
+  "PATH_TO_COGADB_SOURCE_CODE=\"/home/gurumurt/Hawk-VLDBJ/source\""
+  "QUERY_COMPILATION_CC=\"/usr/lib/llvm-3.6/bin/clang\""
+  "QUERY_COMPILATION_CLANG_VERSION=\"3.6.2\""
+  "QUERY_COMPILATION_CXX=\"/usr/lib/llvm-3.6/bin/clang++\""
   )
 
 # The include file search paths:

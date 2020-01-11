@@ -114,8 +114,6 @@ test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libpthread.so
 test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/query_compiler_ssb-tests: /usr/lib/libbam.a
-test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libz.so
 test/query_compiler_ssb-tests: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/query_compiler_ssb-tests: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/query_compiler_ssb-tests: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

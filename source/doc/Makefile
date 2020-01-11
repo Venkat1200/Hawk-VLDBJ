@@ -56,38 +56,48 @@ CMAKE_BINARY_DIR = /home/gurumurt/Hawk-VLDBJ/source
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : install/local/fast
+.PHONY : edit_cache/fast
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/gurumurt/Hawk-VLDBJ/source && /usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	cd /home/gurumurt/Hawk-VLDBJ/source && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/gurumurt/Hawk-VLDBJ/source/CPackSourceConfig.cmake
+.PHONY : package_source
 
-# Special rule for the target package
-package/fast: package
+# Special rule for the target package_source
+package_source/fast: package_source
 
-.PHONY : package/fast
+.PHONY : package_source/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : test/fast
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -101,6 +111,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	cd /home/gurumurt/Hawk-VLDBJ/source && /usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+
+.PHONY : package/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -112,48 +133,16 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/local
+install/local/fast: install/local
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/gurumurt/Hawk-VLDBJ/source && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/gurumurt/Hawk-VLDBJ/source/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -188,21 +177,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-doc/CMakeFiles/cogadb-doc-print.dir/rule:
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 doc/CMakeFiles/cogadb-doc-print.dir/rule
-.PHONY : doc/CMakeFiles/cogadb-doc-print.dir/rule
-
-# Convenience name for target.
-cogadb-doc-print: doc/CMakeFiles/cogadb-doc-print.dir/rule
-
-.PHONY : cogadb-doc-print
-
-# fast build rule for target.
-cogadb-doc-print/fast:
-	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f doc/CMakeFiles/cogadb-doc-print.dir/build.make doc/CMakeFiles/cogadb-doc-print.dir/build
-.PHONY : cogadb-doc-print/fast
-
-# Convenience name for target.
 doc/CMakeFiles/cogadb-doc.dir/rule:
 	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 doc/CMakeFiles/cogadb-doc.dir/rule
 .PHONY : doc/CMakeFiles/cogadb-doc.dir/rule
@@ -217,23 +191,37 @@ cogadb-doc/fast:
 	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f doc/CMakeFiles/cogadb-doc.dir/build.make doc/CMakeFiles/cogadb-doc.dir/build
 .PHONY : cogadb-doc/fast
 
+# Convenience name for target.
+doc/CMakeFiles/cogadb-doc-print.dir/rule:
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f CMakeFiles/Makefile2 doc/CMakeFiles/cogadb-doc-print.dir/rule
+.PHONY : doc/CMakeFiles/cogadb-doc-print.dir/rule
+
+# Convenience name for target.
+cogadb-doc-print: doc/CMakeFiles/cogadb-doc-print.dir/rule
+
+.PHONY : cogadb-doc-print
+
+# fast build rule for target.
+cogadb-doc-print/fast:
+	cd /home/gurumurt/Hawk-VLDBJ/source && $(MAKE) -f doc/CMakeFiles/cogadb-doc-print.dir/build.make doc/CMakeFiles/cogadb-doc-print.dir/build
+.PHONY : cogadb-doc-print/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... package"
-	@echo "... test"
-	@echo "... cogadb-doc-print"
-	@echo "... cogadb-doc"
-	@echo "... install"
-	@echo "... install/strip"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... package_source"
 	@echo "... edit_cache"
+	@echo "... package_source"
+	@echo "... rebuild_cache"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... cogadb-doc"
+	@echo "... package"
+	@echo "... cogadb-doc-print"
+	@echo "... install/strip"
+	@echo "... install/local"
 .PHONY : help
 
 

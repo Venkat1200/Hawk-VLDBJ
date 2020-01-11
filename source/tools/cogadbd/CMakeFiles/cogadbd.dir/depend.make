@@ -38,7 +38,6 @@ tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o: /usr/local/include/compute/boos
 tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o: /usr/local/include/compute/boost/compute/types/fundamental.hpp
 tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o: /usr/local/include/compute/boost/compute/utility/extents.hpp
 tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o: /usr/local/include/compute/boost/compute/utility/wait_list.hpp
-tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o: config.h
 tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o: external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver/DriverInterface.h
 tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o: external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver/MSRAccessor.h
 tools/cogadbd/CMakeFiles/cogadbd.dir/main.cpp.o: external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver/PCIDriverInterface.h

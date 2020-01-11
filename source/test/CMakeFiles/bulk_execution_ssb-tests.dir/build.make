@@ -114,8 +114,6 @@ test/bulk_execution_ssb-tests: /usr/lib/x86_64-linux-gnu/libpthread.so
 test/bulk_execution_ssb-tests: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/bulk_execution_ssb-tests: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/bulk_execution_ssb-tests: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/bulk_execution_ssb-tests: /usr/lib/libbam.a
-test/bulk_execution_ssb-tests: /usr/lib/x86_64-linux-gnu/libz.so
 test/bulk_execution_ssb-tests: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/bulk_execution_ssb-tests: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/bulk_execution_ssb-tests: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

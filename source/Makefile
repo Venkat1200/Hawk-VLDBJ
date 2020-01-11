@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/gurumurt/Hawk-VLDBJ/source
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	/usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -100,6 +89,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -112,27 +112,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install/local
-install/local/fast: install/local
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+.PHONY : install/strip/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -144,16 +133,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target package
+package/fast: package
 
-.PHONY : install/strip/fast
+.PHONY : package/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -188,45 +177,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named doc
-
-# Build rule for target.
-doc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 doc
-.PHONY : doc
-
-# fast build rule for target.
-doc/fast:
-	$(MAKE) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/build
-.PHONY : doc/fast
-
-#=============================================================================
-# Target rules for targets named generic_selection_benchmark
-
-# Build rule for target.
-generic_selection_benchmark: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 generic_selection_benchmark
-.PHONY : generic_selection_benchmark
-
-# fast build rule for target.
-generic_selection_benchmark/fast:
-	$(MAKE) -f CMakeFiles/generic_selection_benchmark.dir/build.make CMakeFiles/generic_selection_benchmark.dir/build
-.PHONY : generic_selection_benchmark/fast
-
-#=============================================================================
-# Target rules for targets named aggregation_benchmark
-
-# Build rule for target.
-aggregation_benchmark: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 aggregation_benchmark
-.PHONY : aggregation_benchmark
-
-# fast build rule for target.
-aggregation_benchmark/fast:
-	$(MAKE) -f CMakeFiles/aggregation_benchmark.dir/build.make CMakeFiles/aggregation_benchmark.dir/build
-.PHONY : aggregation_benchmark/fast
-
-#=============================================================================
 # Target rules for targets named cogadb
 
 # Build rule for target.
@@ -238,19 +188,6 @@ cogadb: cmake_check_build_system
 cogadb/fast:
 	$(MAKE) -f CMakeFiles/cogadb.dir/build.make CMakeFiles/cogadb.dir/build
 .PHONY : cogadb/fast
-
-#=============================================================================
-# Target rules for targets named sql_benchmark_parser
-
-# Build rule for target.
-sql_benchmark_parser: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sql_benchmark_parser
-.PHONY : sql_benchmark_parser
-
-# fast build rule for target.
-sql_benchmark_parser/fast:
-	$(MAKE) -f CMakeFiles/sql_benchmark_parser.dir/build.make CMakeFiles/sql_benchmark_parser.dir/build
-.PHONY : sql_benchmark_parser/fast
 
 #=============================================================================
 # Target rules for targets named SQLParser
@@ -279,43 +216,17 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named selection_benchmark
+# Target rules for targets named doc
 
 # Build rule for target.
-selection_benchmark: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 selection_benchmark
-.PHONY : selection_benchmark
+doc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 doc
+.PHONY : doc
 
 # fast build rule for target.
-selection_benchmark/fast:
-	$(MAKE) -f CMakeFiles/selection_benchmark.dir/build.make CMakeFiles/selection_benchmark.dir/build
-.PHONY : selection_benchmark/fast
-
-#=============================================================================
-# Target rules for targets named sql_test_ssb_diagrams
-
-# Build rule for target.
-sql_test_ssb_diagrams: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sql_test_ssb_diagrams
-.PHONY : sql_test_ssb_diagrams
-
-# fast build rule for target.
-sql_test_ssb_diagrams/fast:
-	$(MAKE) -f CMakeFiles/sql_test_ssb_diagrams.dir/build.make CMakeFiles/sql_test_ssb_diagrams.dir/build
-.PHONY : sql_test_ssb_diagrams/fast
-
-#=============================================================================
-# Target rules for targets named sort_benchmark
-
-# Build rule for target.
-sort_benchmark: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 sort_benchmark
-.PHONY : sort_benchmark
-
-# fast build rule for target.
-sort_benchmark/fast:
-	$(MAKE) -f CMakeFiles/sort_benchmark.dir/build.make CMakeFiles/sort_benchmark.dir/build
-.PHONY : sort_benchmark/fast
+doc/fast:
+	$(MAKE) -f CMakeFiles/doc.dir/build.make CMakeFiles/doc.dir/build
+.PHONY : doc/fast
 
 #=============================================================================
 # Target rules for targets named cuda_gpu_backend
@@ -329,19 +240,6 @@ cuda_gpu_backend: cmake_check_build_system
 cuda_gpu_backend/fast:
 	$(MAKE) -f CMakeFiles/cuda_gpu_backend.dir/build.make CMakeFiles/cuda_gpu_backend.dir/build
 .PHONY : cuda_gpu_backend/fast
-
-#=============================================================================
-# Target rules for targets named join_benchmark
-
-# Build rule for target.
-join_benchmark: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 join_benchmark
-.PHONY : join_benchmark
-
-# fast build rule for target.
-join_benchmark/fast:
-	$(MAKE) -f CMakeFiles/join_benchmark.dir/build.make CMakeFiles/join_benchmark.dir/build
-.PHONY : join_benchmark/fast
 
 #=============================================================================
 # Target rules for targets named hype
@@ -396,19 +294,6 @@ cogadbd/fast:
 .PHONY : cogadbd/fast
 
 #=============================================================================
-# Target rules for targets named cogadb-doc-print
-
-# Build rule for target.
-cogadb-doc-print: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cogadb-doc-print
-.PHONY : cogadb-doc-print
-
-# fast build rule for target.
-cogadb-doc-print/fast:
-	$(MAKE) -f doc/CMakeFiles/cogadb-doc-print.dir/build.make doc/CMakeFiles/cogadb-doc-print.dir/build
-.PHONY : cogadb-doc-print/fast
-
-#=============================================================================
 # Target rules for targets named cogadb-doc
 
 # Build rule for target.
@@ -421,140 +306,18 @@ cogadb-doc/fast:
 	$(MAKE) -f doc/CMakeFiles/cogadb-doc.dir/build.make doc/CMakeFiles/cogadb-doc.dir/build
 .PHONY : cogadb-doc/fast
 
-benchmarks/aggregation_benchmark.o: benchmarks/aggregation_benchmark.cpp.o
+#=============================================================================
+# Target rules for targets named cogadb-doc-print
 
-.PHONY : benchmarks/aggregation_benchmark.o
+# Build rule for target.
+cogadb-doc-print: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cogadb-doc-print
+.PHONY : cogadb-doc-print
 
-# target to build an object file
-benchmarks/aggregation_benchmark.cpp.o:
-	$(MAKE) -f CMakeFiles/aggregation_benchmark.dir/build.make CMakeFiles/aggregation_benchmark.dir/benchmarks/aggregation_benchmark.cpp.o
-.PHONY : benchmarks/aggregation_benchmark.cpp.o
-
-benchmarks/aggregation_benchmark.i: benchmarks/aggregation_benchmark.cpp.i
-
-.PHONY : benchmarks/aggregation_benchmark.i
-
-# target to preprocess a source file
-benchmarks/aggregation_benchmark.cpp.i:
-	$(MAKE) -f CMakeFiles/aggregation_benchmark.dir/build.make CMakeFiles/aggregation_benchmark.dir/benchmarks/aggregation_benchmark.cpp.i
-.PHONY : benchmarks/aggregation_benchmark.cpp.i
-
-benchmarks/aggregation_benchmark.s: benchmarks/aggregation_benchmark.cpp.s
-
-.PHONY : benchmarks/aggregation_benchmark.s
-
-# target to generate assembly for a file
-benchmarks/aggregation_benchmark.cpp.s:
-	$(MAKE) -f CMakeFiles/aggregation_benchmark.dir/build.make CMakeFiles/aggregation_benchmark.dir/benchmarks/aggregation_benchmark.cpp.s
-.PHONY : benchmarks/aggregation_benchmark.cpp.s
-
-benchmarks/generic_selection_benchmark.o: benchmarks/generic_selection_benchmark.cpp.o
-
-.PHONY : benchmarks/generic_selection_benchmark.o
-
-# target to build an object file
-benchmarks/generic_selection_benchmark.cpp.o:
-	$(MAKE) -f CMakeFiles/generic_selection_benchmark.dir/build.make CMakeFiles/generic_selection_benchmark.dir/benchmarks/generic_selection_benchmark.cpp.o
-.PHONY : benchmarks/generic_selection_benchmark.cpp.o
-
-benchmarks/generic_selection_benchmark.i: benchmarks/generic_selection_benchmark.cpp.i
-
-.PHONY : benchmarks/generic_selection_benchmark.i
-
-# target to preprocess a source file
-benchmarks/generic_selection_benchmark.cpp.i:
-	$(MAKE) -f CMakeFiles/generic_selection_benchmark.dir/build.make CMakeFiles/generic_selection_benchmark.dir/benchmarks/generic_selection_benchmark.cpp.i
-.PHONY : benchmarks/generic_selection_benchmark.cpp.i
-
-benchmarks/generic_selection_benchmark.s: benchmarks/generic_selection_benchmark.cpp.s
-
-.PHONY : benchmarks/generic_selection_benchmark.s
-
-# target to generate assembly for a file
-benchmarks/generic_selection_benchmark.cpp.s:
-	$(MAKE) -f CMakeFiles/generic_selection_benchmark.dir/build.make CMakeFiles/generic_selection_benchmark.dir/benchmarks/generic_selection_benchmark.cpp.s
-.PHONY : benchmarks/generic_selection_benchmark.cpp.s
-
-benchmarks/join_benchmark.o: benchmarks/join_benchmark.cpp.o
-
-.PHONY : benchmarks/join_benchmark.o
-
-# target to build an object file
-benchmarks/join_benchmark.cpp.o:
-	$(MAKE) -f CMakeFiles/join_benchmark.dir/build.make CMakeFiles/join_benchmark.dir/benchmarks/join_benchmark.cpp.o
-.PHONY : benchmarks/join_benchmark.cpp.o
-
-benchmarks/join_benchmark.i: benchmarks/join_benchmark.cpp.i
-
-.PHONY : benchmarks/join_benchmark.i
-
-# target to preprocess a source file
-benchmarks/join_benchmark.cpp.i:
-	$(MAKE) -f CMakeFiles/join_benchmark.dir/build.make CMakeFiles/join_benchmark.dir/benchmarks/join_benchmark.cpp.i
-.PHONY : benchmarks/join_benchmark.cpp.i
-
-benchmarks/join_benchmark.s: benchmarks/join_benchmark.cpp.s
-
-.PHONY : benchmarks/join_benchmark.s
-
-# target to generate assembly for a file
-benchmarks/join_benchmark.cpp.s:
-	$(MAKE) -f CMakeFiles/join_benchmark.dir/build.make CMakeFiles/join_benchmark.dir/benchmarks/join_benchmark.cpp.s
-.PHONY : benchmarks/join_benchmark.cpp.s
-
-benchmarks/selection_benchmark.o: benchmarks/selection_benchmark.cpp.o
-
-.PHONY : benchmarks/selection_benchmark.o
-
-# target to build an object file
-benchmarks/selection_benchmark.cpp.o:
-	$(MAKE) -f CMakeFiles/selection_benchmark.dir/build.make CMakeFiles/selection_benchmark.dir/benchmarks/selection_benchmark.cpp.o
-.PHONY : benchmarks/selection_benchmark.cpp.o
-
-benchmarks/selection_benchmark.i: benchmarks/selection_benchmark.cpp.i
-
-.PHONY : benchmarks/selection_benchmark.i
-
-# target to preprocess a source file
-benchmarks/selection_benchmark.cpp.i:
-	$(MAKE) -f CMakeFiles/selection_benchmark.dir/build.make CMakeFiles/selection_benchmark.dir/benchmarks/selection_benchmark.cpp.i
-.PHONY : benchmarks/selection_benchmark.cpp.i
-
-benchmarks/selection_benchmark.s: benchmarks/selection_benchmark.cpp.s
-
-.PHONY : benchmarks/selection_benchmark.s
-
-# target to generate assembly for a file
-benchmarks/selection_benchmark.cpp.s:
-	$(MAKE) -f CMakeFiles/selection_benchmark.dir/build.make CMakeFiles/selection_benchmark.dir/benchmarks/selection_benchmark.cpp.s
-.PHONY : benchmarks/selection_benchmark.cpp.s
-
-benchmarks/sort_benchmark.o: benchmarks/sort_benchmark.cpp.o
-
-.PHONY : benchmarks/sort_benchmark.o
-
-# target to build an object file
-benchmarks/sort_benchmark.cpp.o:
-	$(MAKE) -f CMakeFiles/sort_benchmark.dir/build.make CMakeFiles/sort_benchmark.dir/benchmarks/sort_benchmark.cpp.o
-.PHONY : benchmarks/sort_benchmark.cpp.o
-
-benchmarks/sort_benchmark.i: benchmarks/sort_benchmark.cpp.i
-
-.PHONY : benchmarks/sort_benchmark.i
-
-# target to preprocess a source file
-benchmarks/sort_benchmark.cpp.i:
-	$(MAKE) -f CMakeFiles/sort_benchmark.dir/build.make CMakeFiles/sort_benchmark.dir/benchmarks/sort_benchmark.cpp.i
-.PHONY : benchmarks/sort_benchmark.cpp.i
-
-benchmarks/sort_benchmark.s: benchmarks/sort_benchmark.cpp.s
-
-.PHONY : benchmarks/sort_benchmark.s
-
-# target to generate assembly for a file
-benchmarks/sort_benchmark.cpp.s:
-	$(MAKE) -f CMakeFiles/sort_benchmark.dir/build.make CMakeFiles/sort_benchmark.dir/benchmarks/sort_benchmark.cpp.s
-.PHONY : benchmarks/sort_benchmark.cpp.s
+# fast build rule for target.
+cogadb-doc-print/fast:
+	$(MAKE) -f doc/CMakeFiles/cogadb-doc-print.dir/build.make doc/CMakeFiles/cogadb-doc-print.dir/build
+.PHONY : cogadb-doc-print/fast
 
 external/IntelPerformanceCounterMonitorV2.7/client_bw.o: external/IntelPerformanceCounterMonitorV2.7/client_bw.cpp.o
 
@@ -4802,7 +4565,6 @@ lib/cogadb/src/sql/server/benchmark_parser.o: lib/cogadb/src/sql/server/benchmar
 # target to build an object file
 lib/cogadb/src/sql/server/benchmark_parser.cpp.o:
 	$(MAKE) -f CMakeFiles/cogadb.dir/build.make CMakeFiles/cogadb.dir/lib/cogadb/src/sql/server/benchmark_parser.cpp.o
-	$(MAKE) -f CMakeFiles/sql_benchmark_parser.dir/build.make CMakeFiles/sql_benchmark_parser.dir/lib/cogadb/src/sql/server/benchmark_parser.cpp.o
 .PHONY : lib/cogadb/src/sql/server/benchmark_parser.cpp.o
 
 lib/cogadb/src/sql/server/benchmark_parser.i: lib/cogadb/src/sql/server/benchmark_parser.cpp.i
@@ -4812,7 +4574,6 @@ lib/cogadb/src/sql/server/benchmark_parser.i: lib/cogadb/src/sql/server/benchmar
 # target to preprocess a source file
 lib/cogadb/src/sql/server/benchmark_parser.cpp.i:
 	$(MAKE) -f CMakeFiles/cogadb.dir/build.make CMakeFiles/cogadb.dir/lib/cogadb/src/sql/server/benchmark_parser.cpp.i
-	$(MAKE) -f CMakeFiles/sql_benchmark_parser.dir/build.make CMakeFiles/sql_benchmark_parser.dir/lib/cogadb/src/sql/server/benchmark_parser.cpp.i
 .PHONY : lib/cogadb/src/sql/server/benchmark_parser.cpp.i
 
 lib/cogadb/src/sql/server/benchmark_parser.s: lib/cogadb/src/sql/server/benchmark_parser.cpp.s
@@ -4822,7 +4583,6 @@ lib/cogadb/src/sql/server/benchmark_parser.s: lib/cogadb/src/sql/server/benchmar
 # target to generate assembly for a file
 lib/cogadb/src/sql/server/benchmark_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/cogadb.dir/build.make CMakeFiles/cogadb.dir/lib/cogadb/src/sql/server/benchmark_parser.cpp.s
-	$(MAKE) -f CMakeFiles/sql_benchmark_parser.dir/build.make CMakeFiles/sql_benchmark_parser.dir/lib/cogadb/src/sql/server/benchmark_parser.cpp.s
 .PHONY : lib/cogadb/src/sql/server/benchmark_parser.cpp.s
 
 lib/cogadb/src/sql/server/sql_driver.o: lib/cogadb/src/sql/server/sql_driver.cpp.o
@@ -4878,33 +4638,6 @@ lib/cogadb/src/sql/server/sql_parsetree.s: lib/cogadb/src/sql/server/sql_parsetr
 lib/cogadb/src/sql/server/sql_parsetree.cpp.s:
 	$(MAKE) -f CMakeFiles/cogadb.dir/build.make CMakeFiles/cogadb.dir/lib/cogadb/src/sql/server/sql_parsetree.cpp.s
 .PHONY : lib/cogadb/src/sql/server/sql_parsetree.cpp.s
-
-lib/cogadb/src/sql/server/test_ssb_diagrams.o: lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.o
-
-.PHONY : lib/cogadb/src/sql/server/test_ssb_diagrams.o
-
-# target to build an object file
-lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.o:
-	$(MAKE) -f CMakeFiles/sql_test_ssb_diagrams.dir/build.make CMakeFiles/sql_test_ssb_diagrams.dir/lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.o
-.PHONY : lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.o
-
-lib/cogadb/src/sql/server/test_ssb_diagrams.i: lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.i
-
-.PHONY : lib/cogadb/src/sql/server/test_ssb_diagrams.i
-
-# target to preprocess a source file
-lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.i:
-	$(MAKE) -f CMakeFiles/sql_test_ssb_diagrams.dir/build.make CMakeFiles/sql_test_ssb_diagrams.dir/lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.i
-.PHONY : lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.i
-
-lib/cogadb/src/sql/server/test_ssb_diagrams.s: lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.s
-
-.PHONY : lib/cogadb/src/sql/server/test_ssb_diagrams.s
-
-# target to generate assembly for a file
-lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.s:
-	$(MAKE) -f CMakeFiles/sql_test_ssb_diagrams.dir/build.make CMakeFiles/sql_test_ssb_diagrams.dir/lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.s
-.PHONY : lib/cogadb/src/sql/server/test_ssb_diagrams.cpp.s
 
 lib/cogadb/src/statistics/column_statistics.o: lib/cogadb/src/statistics/column_statistics.cpp.o
 
@@ -6289,48 +6022,25 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... package"
 	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... test"
-	@echo "... doc"
-	@echo "... generic_selection_benchmark"
-	@echo "... aggregation_benchmark"
 	@echo "... cogadb"
-	@echo "... sql_benchmark_parser"
+	@echo "... install/local"
 	@echo "... SQLParser"
 	@echo "... gtest"
-	@echo "... selection_benchmark"
-	@echo "... sql_test_ssb_diagrams"
-	@echo "... sort_benchmark"
-	@echo "... list_install_components"
-	@echo "... install/strip"
+	@echo "... doc"
+	@echo "... install"
 	@echo "... cuda_gpu_backend"
-	@echo "... join_benchmark"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... package"
 	@echo "... hype"
 	@echo "... hype-doc"
 	@echo "... hype-doc-print"
 	@echo "... cogadbd"
-	@echo "... cogadb-doc-print"
 	@echo "... cogadb-doc"
-	@echo "... benchmarks/aggregation_benchmark.o"
-	@echo "... benchmarks/aggregation_benchmark.i"
-	@echo "... benchmarks/aggregation_benchmark.s"
-	@echo "... benchmarks/generic_selection_benchmark.o"
-	@echo "... benchmarks/generic_selection_benchmark.i"
-	@echo "... benchmarks/generic_selection_benchmark.s"
-	@echo "... benchmarks/join_benchmark.o"
-	@echo "... benchmarks/join_benchmark.i"
-	@echo "... benchmarks/join_benchmark.s"
-	@echo "... benchmarks/selection_benchmark.o"
-	@echo "... benchmarks/selection_benchmark.i"
-	@echo "... benchmarks/selection_benchmark.s"
-	@echo "... benchmarks/sort_benchmark.o"
-	@echo "... benchmarks/sort_benchmark.i"
-	@echo "... benchmarks/sort_benchmark.s"
+	@echo "... cogadb-doc-print"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/client_bw.o"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/client_bw.i"
 	@echo "... external/IntelPerformanceCounterMonitorV2.7/client_bw.s"
@@ -6811,9 +6521,6 @@ help:
 	@echo "... lib/cogadb/src/sql/server/sql_parsetree.o"
 	@echo "... lib/cogadb/src/sql/server/sql_parsetree.i"
 	@echo "... lib/cogadb/src/sql/server/sql_parsetree.s"
-	@echo "... lib/cogadb/src/sql/server/test_ssb_diagrams.o"
-	@echo "... lib/cogadb/src/sql/server/test_ssb_diagrams.i"
-	@echo "... lib/cogadb/src/sql/server/test_ssb_diagrams.s"
 	@echo "... lib/cogadb/src/statistics/column_statistics.o"
 	@echo "... lib/cogadb/src/statistics/column_statistics.i"
 	@echo "... lib/cogadb/src/statistics/column_statistics.s"

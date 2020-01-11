@@ -114,8 +114,6 @@ test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libpthread.so
 test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/vector_at_a_time_test: /usr/lib/libbam.a
-test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libz.so
 test/vector_at_a_time_test: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/vector_at_a_time_test: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/vector_at_a_time_test: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

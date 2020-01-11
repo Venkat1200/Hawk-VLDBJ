@@ -114,8 +114,6 @@ lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libpthread.so
 lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libtbb.so
 lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/libbam.a
-lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libz.so
 lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/x86_64-linux-gnu/libreadline.so
 lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 lib/cogadb/test/wah_bitmap_column-tests: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

@@ -490,8 +490,6 @@ vector
 boost/compute/event.hpp
 -
 
-config.h
-
 external/IntelPerformanceCounterMonitorV2.7/MacMSRDriver/DriverInterface.h
 stdint.h
 -
@@ -835,8 +833,6 @@ string
 -
 
 lib/cogadb/include/core/global_definitions.hpp
-config.h
-lib/cogadb/include/core/config.h
 inttypes.h
 -
 boost/any.hpp
@@ -888,7 +884,7 @@ utility
 boost/shared_ptr.hpp
 -
 hype.hpp
--
+lib/cogadb/include/core/hype.hpp
 
 lib/cogadb/include/core/operator_parameter_types.hpp
 core/global_definitions.hpp
@@ -955,8 +951,6 @@ core/base_column.hpp
 -
 
 lib/cogadb/include/hardware_optimizations/primitives.hpp
-config.h
-lib/cogadb/include/hardware_optimizations/config.h
 boost/any.hpp
 -
 boost/bind.hpp
@@ -1510,7 +1504,7 @@ iostream
 persistence/storage_manager.hpp
 -
 util/time_measurement.hpp
--
+lib/cogadb/include/unittests/util/time_measurement.hpp
 lookup_table/lookup_table.hpp
 -
 util/tpch_benchmark.hpp

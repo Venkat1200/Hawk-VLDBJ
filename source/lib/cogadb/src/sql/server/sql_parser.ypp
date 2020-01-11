@@ -1173,11 +1173,11 @@ void SQL::Parser::error(const std::string &m)
 {
 	driver.error(m);
 }
-#else
-void SQL::Parser::error(const location_type &l, const std::string &m)
-{
-	driver.error(m);
-}
+//#else
+//void SQL::Parser::error(const location_type &l, const std::string &m)
+//{
+//	driver.error(m);
+//}
 #endif
 
 } /* namespace CoGaDB */

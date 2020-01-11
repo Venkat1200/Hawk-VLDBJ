@@ -114,8 +114,6 @@ test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libpthread.so
 test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/parser/json_parser-tests: /usr/lib/libbam.a
-test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libz.so
 test/parser/json_parser-tests: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/parser/json_parser-tests: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/parser/json_parser-tests: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

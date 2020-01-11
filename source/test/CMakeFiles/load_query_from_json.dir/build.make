@@ -114,8 +114,6 @@ test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libpthread.so
 test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/load_query_from_json: /usr/lib/libbam.a
-test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libz.so
 test/load_query_from_json: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/load_query_from_json: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/load_query_from_json: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

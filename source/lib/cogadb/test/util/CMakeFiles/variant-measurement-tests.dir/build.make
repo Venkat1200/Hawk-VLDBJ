@@ -114,8 +114,6 @@ lib/cogadb/test/util/variant-measurement-tests: /usr/lib/x86_64-linux-gnu/libpth
 lib/cogadb/test/util/variant-measurement-tests: /usr/lib/x86_64-linux-gnu/libtbb.so
 lib/cogadb/test/util/variant-measurement-tests: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 lib/cogadb/test/util/variant-measurement-tests: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-lib/cogadb/test/util/variant-measurement-tests: /usr/lib/libbam.a
-lib/cogadb/test/util/variant-measurement-tests: /usr/lib/x86_64-linux-gnu/libz.so
 lib/cogadb/test/util/variant-measurement-tests: /usr/lib/x86_64-linux-gnu/libreadline.so
 lib/cogadb/test/util/variant-measurement-tests: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 lib/cogadb/test/util/variant-measurement-tests: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

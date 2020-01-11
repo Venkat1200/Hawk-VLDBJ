@@ -114,8 +114,6 @@ test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libpthread.s
 test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/json_query_compiler_interface-tests: /usr/lib/libbam.a
-test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libz.so
 test/json_query_compiler_interface-tests: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/json_query_compiler_interface-tests: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/json_query_compiler_interface-tests: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

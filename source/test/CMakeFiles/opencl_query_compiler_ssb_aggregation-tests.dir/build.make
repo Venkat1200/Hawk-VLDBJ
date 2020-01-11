@@ -114,8 +114,6 @@ test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/x86_64-linux-gnu/libp
 test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/x86_64-linux-gnu/libtbb.so
 test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/x86_64-linux-gnu/libtbbmalloc.so
 test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/x86_64-linux-gnu/libOpenCL.so
-test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/libbam.a
-test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/x86_64-linux-gnu/libz.so
 test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/x86_64-linux-gnu/libreadline.so
 test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/llvm-3.6/lib/libclangFrontend.a
 test/opencl_query_compiler_ssb_aggregation-tests: /usr/lib/llvm-3.6/lib/libclangFrontendTool.a

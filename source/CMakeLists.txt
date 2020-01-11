@@ -43,8 +43,12 @@ cmake_minimum_required(VERSION 2.6)
 cmake_policy(SET CMP0012 NEW)
 
 set(COGADB_VERSION "\"0.4.2\"")
+add_definitions( -DCOGADB_VERSION=${COGADB_VERSION})
 set(PATH_TO_COGADB_EXECUTABLE "\"${PROJECT_BINARY_DIR}\"")
+add_definitions( -DPATH_TO_COGADB_EXECUTABLE=${PATH_TO_COGADB_EXECUTABLE})
 set(PATH_TO_COGADB_SOURCE_CODE "\"${PROJECT_SOURCE_DIR}\"")
+add_definitions( -DPATH_TO_COGADB_SOURCE_CODE=${PATH_TO_COGADB_SOURCE_CODE})
+
 #set(PATH_TO_DATA_OF_TESTS "\"${PROJECT_BINARY_DIR}/test/testdata\"")
 set(PATH_TO_DATA_OF_TESTS "\"${PROJECT_BINARY_DIR}/test/testdata\"")
 
@@ -153,13 +157,13 @@ execute_process(COMMAND ${BISON_EXECUTABLE} --print-datadir
 		OUTPUT_VARIABLE BISON_DATA_DIR
 		OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-#message(INFO "Bison Version: ${BISON_VERSION}")
+message(INFO "	Bison Version: ${BISON_VERSION}")
 #option(BISON_VERSION_3_OR_HIGHER "Bison Version three or higher found" ON)
 if(BISON_VERSION VERSION_EQUAL 3.0.2 OR BISON_VERSION  VERSION_GREATER 3.0.2)
     set(BISON_VERSION_3_OR_HIGHER true)
 else(BISON_VERSION VERSION_LESS 3.0.2)
     set(BISON_VERSION_3_OR_HIGHER false)
-    #option(BISON_VERSION_3_OR_HIGHER "Bison Version three or higher found" OFF)
+    option(BISON_VERSION_3_OR_HIGHER "Bison Version three or higher found" OFF)
 endif()
 
 # Configure BAM - for genomics support
@@ -308,11 +312,12 @@ set(CUDA_NVCC_FLAGS " -rdc=true -gencode arch=compute_20,code=sm_20") #CACHE STR
 
 execute_process(COMMAND ${LLVM_CONFIG_EXECUTABLE} --prefix OUTPUT_VARIABLE LLVM_INSTALL_PREFIX OUTPUT_STRIP_TRAILING_WHITESPACE)
 set(QUERY_COMPILATION_CC "\"${LLVM_INSTALL_PREFIX}/bin/clang\"")
+add_definitions( -DQUERY_COMPILATION_CC=${QUERY_COMPILATION_CC})
 set(QUERY_COMPILATION_CXX "\"${LLVM_INSTALL_PREFIX}/bin/clang++\"")
-
+add_definitions( -DQUERY_COMPILATION_CXX=${QUERY_COMPILATION_CXX})
 execute_process(COMMAND ${LLVM_CONFIG_EXECUTABLE} --version OUTPUT_VARIABLE CLANG_VERSION OUTPUT_STRIP_TRAILING_WHITESPACE)
 set(QUERY_COMPILATION_CLANG_VERSION "\"${CLANG_VERSION}\"")
-
+add_definitions( -DQUERY_COMPILATION_CLANG_VERSION=${QUERY_COMPILATION_CLANG_VERSION})
 # Generate Autoconf-like config.h
 configure_file("${PROJECT_SOURCE_DIR}/config.h.in" "${PROJECT_BINARY_DIR}/config.h")
 add_definitions(-DHAVE_CONFIG_H)
@@ -457,57 +462,57 @@ INCLUDE(CPack)
 ### benchmarks/CMakeLists.txt and run by CTest
 ###
 
-add_executable(sql_test_ssb_diagrams lib/cogadb/src/sql/server/test_ssb_diagrams.cpp)
-target_link_libraries(sql_test_ssb_diagrams cogadb)
+#add_executable(sql_test_ssb_diagrams lib/cogadb/src/sql/server/test_ssb_diagrams.cpp)
+#target_link_libraries(sql_test_ssb_diagrams cogadb)
 # put executable in bin/
-set_target_properties(sql_test_ssb_diagrams PROPERTIES
-		      RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+#set_target_properties(sql_test_ssb_diagrams PROPERTIES
+#		      RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 
-add_executable(sql_benchmark_parser lib/cogadb/src/sql/server/benchmark_parser.cpp)
-target_link_libraries(sql_benchmark_parser cogadb)
+#add_executable(sql_benchmark_parser lib/cogadb/src/sql/server/benchmark_parser.cpp)
+#target_link_libraries(sql_benchmark_parser cogadb)
 # put executable in bin/
-set_target_properties(sql_benchmark_parser PROPERTIES
-		      RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
-
-if(ENABLE_GPU_ACCELERATION)
-    add_executable(aggregation_benchmark benchmarks/aggregation_benchmark.cpp)
-    target_link_libraries(aggregation_benchmark cogadb)
-    # put executable in bin/
-    set_target_properties(aggregation_benchmark PROPERTIES
-                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
-
-    add_executable(selection_benchmark benchmarks/selection_benchmark.cpp)
-    target_link_libraries(selection_benchmark cogadb)
-    # put executable in bin/
-    set_target_properties(selection_benchmark PROPERTIES
-                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
-
-    add_executable(sort_benchmark benchmarks/sort_benchmark.cpp)
-    target_link_libraries(sort_benchmark cogadb)
-    # put executable in bin/
-    set_target_properties(sort_benchmark PROPERTIES
-                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
-
-    add_executable(join_benchmark benchmarks/join_benchmark.cpp)
-    target_link_libraries(join_benchmark cogadb)
-    # put executable in bin/
-    set_target_properties(join_benchmark PROPERTIES
-                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
-
-    add_executable(generic_selection_benchmark benchmarks/generic_selection_benchmark.cpp)
-    target_link_libraries(generic_selection_benchmark cogadb)
-    # put executable in bin/
-    set_target_properties(generic_selection_benchmark PROPERTIES
-                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
-
+#set_target_properties(sql_benchmark_parser PROPERTIES
+#		      RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+#
+#if(ENABLE_GPU_ACCELERATION)
+#    add_executable(aggregation_benchmark benchmarks/aggregation_benchmark.cpp)
+#    target_link_libraries(aggregation_benchmark cogadb)
+#    # put executable in bin/
+#    set_target_properties(aggregation_benchmark PROPERTIES
+#                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+#
+#    add_executable(selection_benchmark benchmarks/selection_benchmark.cpp)
+#    target_link_libraries(selection_benchmark cogadb)
+#    # put executable in bin/
+#    set_target_properties(selection_benchmark PROPERTIES
+#                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+#
+#   add_executable(sort_benchmark benchmarks/sort_benchmark.cpp)
+#    target_link_libraries(sort_benchmark cogadb)
+#    # put executable in bin/
+#    set_target_properties(sort_benchmark PROPERTIES
+#                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+#
+#   add_executable(join_benchmark benchmarks/join_benchmark.cpp)
+#    target_link_libraries(join_benchmark cogadb)
+#    # put executable in bin/
+#    set_target_properties(join_benchmark PROPERTIES
+#                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+#
+#    add_executable(generic_selection_benchmark benchmarks/generic_selection_benchmark.cpp)
+#    target_link_libraries(generic_selection_benchmark cogadb)
+#    # put executable in bin/
+#    set_target_properties(generic_selection_benchmark PROPERTIES
+#                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
+#
 #    cuda_add_executable(gpu_memory_allocator benchmarks/gpu_memory_allocator.cu)
-    #set_target_properties(gpu_memory_allocator PROPERTIES LINKER_LANGUAGE CXX)
-    # put executable in bin/
+#    set_target_properties(gpu_memory_allocator PROPERTIES LINKER_LANGUAGE CXX)
+#    # put executable in bin/
 #    set_target_properties(gpu_memory_allocator PROPERTIES
 #                          RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
-else ()
-        message(WARNING "GPU acceleration is disabled, I will not build the hybrid CPU/GPU operator benchmarks!")
-endif()
+#else ()
+#        message(WARNING "GPU acceleration is disabled, I will not build the hybrid CPU/GPU operator benchmarks!")
+#endif()
 
 # Output directory required by libhype
 file(MAKE_DIRECTORY "${PROJECT_BINARY_DIR}/output")
@@ -533,4 +538,4 @@ file(COPY res/parser DESTINATION share/cogadb)
 add_custom_target(doc DEPENDS hype-doc cogadb-doc)
 
 # Testing: create top-level test configuration
-enable_testing()
+#enable_testing()
